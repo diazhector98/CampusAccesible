@@ -24,6 +24,10 @@ class MapViewController: UIViewController {
         tfTo.borderStyle = UITextBorderStyle.roundedRect
         self.view.bringSubview(toFront: tfFrom)
         self.view.bringSubview(toFront: tfTo)
+        tfFrom.filterStrings(["Red", "Blue", "Yellow"])
+        tfTo.filterStrings(["Red", "Blue", "Yellow"])
+        tfFrom.maxResultsListHeight = 200
+        tfTo.maxResultsListHeight = 200
     }
 
     override func didReceiveMemoryWarning() {
