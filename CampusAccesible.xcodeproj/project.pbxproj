@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		412385BD2059C9F900A66A8F /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412385BC2059C9F900A66A8F /* CreditsViewController.swift */; };
-		72E440675C6710CAA48D2E49 /* libPods-CampusAccesible.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8804BAEC18773B5C859343 /* libPods-CampusAccesible.a */; };
 		CF35AD902059985B00A3F17D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD8F2059985B00A3F17D /* AppDelegate.swift */; };
 		CF35AD922059985B00A3F17D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD912059985B00A3F17D /* ExploreViewController.swift */; };
 		CF35AD942059985B00A3F17D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD932059985B00A3F17D /* MapViewController.swift */; };
@@ -17,6 +16,7 @@
 		CF35AD9C2059985B00A3F17D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */; };
 		CF35ADA72059985B00A3F17D /* CampusAccesibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35ADA62059985B00A3F17D /* CampusAccesibleTests.swift */; };
 		CF35ADB22059985B00A3F17D /* CampusAccesibleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35ADB12059985B00A3F17D /* CampusAccesibleUITests.swift */; };
+		DB62EBA509C30313272C94A5 /* Pods_CampusAccesible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46089EEE1235798462B74C7A /* Pods_CampusAccesible.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,7 @@
 		23FDB672713AA4C3F1931630 /* Pods-CampusAccesible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusAccesible.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible.debug.xcconfig"; sourceTree = "<group>"; };
 		2B7891669572F14664B02150 /* Pods-CampusAccesible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusAccesible.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible.release.xcconfig"; sourceTree = "<group>"; };
 		412385BC2059C9F900A66A8F /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
-		6D8804BAEC18773B5C859343 /* libPods-CampusAccesible.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CampusAccesible.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46089EEE1235798462B74C7A /* Pods_CampusAccesible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusAccesible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35AD8C2059985B00A3F17D /* CampusAccesible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusAccesible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35AD8F2059985B00A3F17D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF35AD912059985B00A3F17D /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72E440675C6710CAA48D2E49 /* libPods-CampusAccesible.a in Frameworks */,
+				DB62EBA509C30313272C94A5 /* Pods_CampusAccesible.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 		8AC88D69D50636F9916294EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6D8804BAEC18773B5C859343 /* libPods-CampusAccesible.a */,
+				46089EEE1235798462B74C7A /* Pods_CampusAccesible.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -294,9 +294,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

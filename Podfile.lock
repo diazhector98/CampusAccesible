@@ -6,15 +6,18 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (2.6.0):
     - GoogleMaps/Base (= 2.6.0)
+  - SearchTextField (1.2.0)
 
 DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
+  - SearchTextField
 
 SPEC CHECKSUMS:
   GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
   GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
+  SearchTextField: a5bb7e4c33affadb115afdbe8100d84ef10a8024
 
-PODFILE CHECKSUM: 2886b4e12e6fddc3931bd3cd4d501336124ffde2
+PODFILE CHECKSUM: 486ae8d273b72d21178e2eedfee19708016d9840
 
 COCOAPODS: 1.4.0
