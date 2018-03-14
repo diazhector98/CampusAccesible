@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		412385BD2059C9F900A66A8F /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412385BC2059C9F900A66A8F /* CreditsViewController.swift */; };
 		72E440675C6710CAA48D2E49 /* libPods-CampusAccesible.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8804BAEC18773B5C859343 /* libPods-CampusAccesible.a */; };
 		CF35AD902059985B00A3F17D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD8F2059985B00A3F17D /* AppDelegate.swift */; };
-		CF35AD922059985B00A3F17D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD912059985B00A3F17D /* FirstViewController.swift */; };
-		CF35AD942059985B00A3F17D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD932059985B00A3F17D /* SecondViewController.swift */; };
+		CF35AD922059985B00A3F17D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD912059985B00A3F17D /* ExploreViewController.swift */; };
+		CF35AD942059985B00A3F17D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD932059985B00A3F17D /* MapViewController.swift */; };
 		CF35AD972059985B00A3F17D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD952059985B00A3F17D /* Main.storyboard */; };
 		CF35AD992059985B00A3F17D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD982059985B00A3F17D /* Assets.xcassets */; };
 		CF35AD9C2059985B00A3F17D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */; };
@@ -38,11 +39,12 @@
 /* Begin PBXFileReference section */
 		23FDB672713AA4C3F1931630 /* Pods-CampusAccesible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusAccesible.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible.debug.xcconfig"; sourceTree = "<group>"; };
 		2B7891669572F14664B02150 /* Pods-CampusAccesible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusAccesible.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible.release.xcconfig"; sourceTree = "<group>"; };
+		412385BC2059C9F900A66A8F /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		6D8804BAEC18773B5C859343 /* libPods-CampusAccesible.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CampusAccesible.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35AD8C2059985B00A3F17D /* CampusAccesible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusAccesible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35AD8F2059985B00A3F17D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF35AD912059985B00A3F17D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		CF35AD932059985B00A3F17D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CF35AD912059985B00A3F17D /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		CF35AD932059985B00A3F17D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CF35AD962059985B00A3F17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF35AD982059985B00A3F17D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF35AD9B2059985B00A3F17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -124,9 +126,10 @@
 			isa = PBXGroup;
 			children = (
 				CF35AD8F2059985B00A3F17D /* AppDelegate.swift */,
-				CF35AD912059985B00A3F17D /* FirstViewController.swift */,
-				CF35AD932059985B00A3F17D /* SecondViewController.swift */,
+				CF35AD912059985B00A3F17D /* ExploreViewController.swift */,
+				CF35AD932059985B00A3F17D /* MapViewController.swift */,
 				CF35AD952059985B00A3F17D /* Main.storyboard */,
+				412385BC2059C9F900A66A8F /* CreditsViewController.swift */,
 				CF35AD982059985B00A3F17D /* Assets.xcassets */,
 				CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */,
 				CF35AD9D2059985B00A3F17D /* Info.plist */,
@@ -345,9 +348,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF35AD942059985B00A3F17D /* SecondViewController.swift in Sources */,
+				CF35AD942059985B00A3F17D /* MapViewController.swift in Sources */,
 				CF35AD902059985B00A3F17D /* AppDelegate.swift in Sources */,
-				CF35AD922059985B00A3F17D /* FirstViewController.swift in Sources */,
+				CF35AD922059985B00A3F17D /* ExploreViewController.swift in Sources */,
+				412385BD2059C9F900A66A8F /* CreditsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
