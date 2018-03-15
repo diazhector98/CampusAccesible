@@ -15,6 +15,11 @@ class MapViewController: UIViewController {
     @IBOutlet weak var tfTo: SearchTextField!
     @IBOutlet weak var mapView: GMSMapView!
     
+    var locations : NSArray!
+    var buildings : NSArray!
+    var keyPoints : NSArray!
+    var paths : NSArray!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +33,16 @@ class MapViewController: UIViewController {
         let lowerRightBound = CLLocationCoordinate2D(latitude: 25.648031, longitude: -100.286508)
         let bounds = GMSCoordinateBounds(coordinate: upperLeftBound, coordinate: lowerRightBound)
         mapView.cameraTargetBounds = bounds
+        
+        // Inicializa PropertyLists
+        let locationsPath = Bundle.main.path(forResource: "Property List", ofType: "plist")
+        locations = NSArray(contentsOfFile: locationsPath!)
+        let buildingsPath = Bundle.main.path(forResource: "ListaEdificios", ofType: "plist")
+        buildings = NSArray(contentsOfFile: buildingsPath!)
+        let keyPointsPath = Bundle.main.path(forResource: "PuntosClave", ofType: "plist")
+        keyPoints = NSArray(contentsOfFile: keyPointsPath!)
+        let pathsPath = Bundle.main.path(forResource: "ListaCaminos", ofType: "plist")
+        paths = NSArray(contentsOfFile: pathsPath!)
         
         // Estilo y datos que se filtran
         tfFrom.borderStyle = UITextBorderStyle.roundedRect
