@@ -17,25 +17,29 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Creación del mapa
         let camera = GMSCameraPosition.camera(withLatitude: 25.651130, longitude: -100.289599, zoom: 17.0)
         mapView.camera = camera
         
+        // Restricciones del movimiento del mapa
         mapView.setMinZoom(17.0, maxZoom: 21.0)
-        
         let upperLeftBound = CLLocationCoordinate2D(latitude: 25.653485, longitude: -100.292080)
         let lowerRightBound = CLLocationCoordinate2D(latitude: 25.648031, longitude: -100.286508)
         let bounds = GMSCoordinateBounds(coordinate: upperLeftBound, coordinate: lowerRightBound)
-        
         mapView.cameraTargetBounds = bounds
         
+        // Estilo y datos que se filtran
         tfFrom.borderStyle = UITextBorderStyle.roundedRect
         tfTo.borderStyle = UITextBorderStyle.roundedRect
-        self.view.bringSubview(toFront: tfFrom)
-        self.view.bringSubview(toFront: tfTo)
         tfFrom.filterStrings(["Red", "Blue", "Yellow"])
         tfTo.filterStrings(["Red", "Blue", "Yellow"])
         tfFrom.maxResultsListHeight = 200
         tfTo.maxResultsListHeight = 200
+        
+        // Pone Text Fields arriba del mapa
+        self.view.bringSubview(toFront: tfFrom)
+        self.view.bringSubview(toFront: tfTo)
     }
 
     override func didReceiveMemoryWarning() {
