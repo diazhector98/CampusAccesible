@@ -10,18 +10,6 @@
 	</dict>
 	<dict>
 		<key>longitud</key>
-		<real>25.652536</real>
-		<key>latitud</key>
-		<real>-100.290463</real>
-	</dict>
-	<dict>
-		<key>longitud</key>
-		<real>25.652687</real>
-		<key>latitud</key>
-		<real>-100.290451</real>
-	</dict>
-	<dict>
-		<key>longitud</key>
 		<real>25.652524</real>
 		<key>latitud</key>
 		<real>-100.289956</real>
@@ -550,49 +538,19 @@
 	</dict>
 	<dict>
 		<key>longitud</key>
-		<real>25.650384</real>
+		<real>25.65041</real>
 		<key>latitud</key>
 		<real>-100.290585</real>
 	</dict>
 	<dict>
 		<key>longitud</key>
-		<real>25.650484</real>
-		<key>latitud</key>
-		<real>-100.290585</real>
-	</dict>
-	<dict>
-		<key>longitud</key>
-		<real>25.650484</real>
-		<key>latitud</key>
-		<real>-100.290783</real>
-	</dict>
-	<dict>
-		<key>longitud</key>
-		<real>25.650403</real>
-		<key>latitud</key>
-		<real>-100.290796</real>
-	</dict>
-	<dict>
-		<key>longitud</key>
-		<real>25.650493</real>
-		<key>latitud</key>
-		<real>-100.29096</real>
-	</dict>
-	<dict>
-		<key>longitud</key>
-		<real>25.6504</real>
+		<real>25.65041</real>
 		<key>latitud</key>
 		<real>-100.290973</real>
 	</dict>
 	<dict>
 		<key>longitud</key>
-		<real>25.650496</real>
-		<key>latitud</key>
-		<real>-100.291238</real>
-	</dict>
-	<dict>
-		<key>longitud</key>
-		<real>25.6504</real>
+		<real>25.65041</real>
 		<key>latitud</key>
 		<real>-100.291243</real>
 	</dict>
@@ -612,19 +570,19 @@
 		<key>longitud</key>
 		<real>25.650672</real>
 		<key>latitud</key>
-		<real>-100.290593</real>
+		<real>-100.290585</real>
 	</dict>
 	<dict>
 		<key>longitud</key>
 		<real>25.650801</real>
 		<key>latitud</key>
-		<real>-100.290598</real>
+		<real>-100.290585</real>
 	</dict>
 	<dict>
 		<key>longitud</key>
-		<real>25.650787</real>
+		<real>25.65078</real>
 		<key>latitud</key>
-		<real>-100.290455</real>
+		<real>-100.290585</real>
 	</dict>
 	<dict>
 		<key>longitud</key>
@@ -640,7 +598,7 @@
 	</dict>
 	<dict>
 		<key>longitud</key>
-		<real>25.650949</real>
+		<real>25.65078</real>
 		<key>latitud</key>
 		<real>-100.289815</real>
 	</dict>
@@ -757,6 +715,36 @@
 		<real>25.652393</real>
 		<key>latitud</key>
 		<real>-100.290923</real>
+	</dict>
+	<dict>
+		<key>longitud</key>
+		<real>25.650316</real>
+		<key>latitud</key>
+		<real>-100.289152</real>
+	</dict>
+	<dict>
+		<key>longitud</key>
+		<real>25.650316</real>
+		<key>latitud</key>
+		<real>-100.289815</real>
+	</dict>
+	<dict>
+		<key>longitud</key>
+		<real>25.650316</real>
+		<key>latitud</key>
+		<real>-100.28941</real>
+	</dict>
+	<dict>
+		<key>longitud</key>
+		<real>25.650316</real>
+		<key>latitud</key>
+		<real>-100.290233</real>
+	</dict>
+	<dict>
+		<key>longitud</key>
+		<real>25.65041</real>
+		<key>latitud</key>
+		<real>-100.290233</real>
 	</dict>
 </array>
 </plist>

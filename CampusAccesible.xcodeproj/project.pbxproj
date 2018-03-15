@@ -16,11 +16,12 @@
 		CF35AD9C2059985B00A3F17D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */; };
 		CF35ADA72059985B00A3F17D /* CampusAccesibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35ADA62059985B00A3F17D /* CampusAccesibleTests.swift */; };
 		CF35ADB22059985B00A3F17D /* CampusAccesibleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35ADB12059985B00A3F17D /* CampusAccesibleUITests.swift */; };
-		CF35ADC32059E97200A3F17D /* ListaCaminos.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF35ADBF2059E97100A3F17D /* ListaCaminos.plist */; };
-		CF35ADC42059E97200A3F17D /* PuntosClave.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF35ADC02059E97100A3F17D /* PuntosClave.plist */; };
-		CF35ADC52059E97200A3F17D /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF35ADC12059E97100A3F17D /* Property List.plist */; };
-		CF35ADC62059E97200A3F17D /* ListaEdificios copy.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF35ADC22059E97100A3F17D /* ListaEdificios copy.plist */; };
 		DB62EBA509C30313272C94A5 /* Pods_CampusAccesible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46089EEE1235798462B74C7A /* Pods_CampusAccesible.framework */; };
+		EDEA495F205A01FE004485C4 /* ListaCaminos.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDEA495E205A01FE004485C4 /* ListaCaminos.plist */; };
+		EDEA4961205A0207004485C4 /* ListaEdificios copy.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDEA4960205A0207004485C4 /* ListaEdificios copy.plist */; };
+		EDEA4963205A020E004485C4 /* ListaEdificios.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDEA4962205A020E004485C4 /* ListaEdificios.plist */; };
+		EDEA4965205A0216004485C4 /* PuntosClave.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDEA4964205A0216004485C4 /* PuntosClave.plist */; };
+		EDEA4967205A0235004485C4 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDEA4966205A0235004485C4 /* Property List.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +60,11 @@
 		CF35ADAD2059985B00A3F17D /* CampusAccesibleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusAccesibleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35ADB12059985B00A3F17D /* CampusAccesibleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusAccesibleUITests.swift; sourceTree = "<group>"; };
 		CF35ADB32059985B00A3F17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF35ADBF2059E97100A3F17D /* ListaCaminos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ListaCaminos.plist; path = "../../../../../../Downloads/CampusAccesible Version en la Tienda/CampusAccesibleApp/ListaCaminos.plist"; sourceTree = "<group>"; };
-		CF35ADC02059E97100A3F17D /* PuntosClave.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PuntosClave.plist; path = "../../../../../../Downloads/CampusAccesible Version en la Tienda/CampusAccesibleApp/PuntosClave.plist"; sourceTree = "<group>"; };
-		CF35ADC12059E97100A3F17D /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Property List.plist"; path = "../../../../../../Downloads/CampusAccesible Version en la Tienda/CampusAccesibleApp/Property List.plist"; sourceTree = "<group>"; };
-		CF35ADC22059E97100A3F17D /* ListaEdificios copy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ListaEdificios copy.plist"; path = "../../../../../../Downloads/CampusAccesible Version en la Tienda/CampusAccesibleApp/ListaEdificios copy.plist"; sourceTree = "<group>"; };
+		EDEA495E205A01FE004485C4 /* ListaCaminos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListaCaminos.plist; sourceTree = "<group>"; };
+		EDEA4960205A0207004485C4 /* ListaEdificios copy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ListaEdificios copy.plist"; sourceTree = "<group>"; };
+		EDEA4962205A020E004485C4 /* ListaEdificios.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListaEdificios.plist; sourceTree = "<group>"; };
+		EDEA4964205A0216004485C4 /* PuntosClave.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PuntosClave.plist; sourceTree = "<group>"; };
+		EDEA4966205A0235004485C4 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,14 +139,15 @@
 				CF35AD912059985B00A3F17D /* ExploreViewController.swift */,
 				CF35AD932059985B00A3F17D /* MapViewController.swift */,
 				CF35AD952059985B00A3F17D /* Main.storyboard */,
-				CF35ADBF2059E97100A3F17D /* ListaCaminos.plist */,
-				CF35ADC22059E97100A3F17D /* ListaEdificios copy.plist */,
-				CF35ADC12059E97100A3F17D /* Property List.plist */,
-				CF35ADC02059E97100A3F17D /* PuntosClave.plist */,
 				412385BC2059C9F900A66A8F /* CreditsViewController.swift */,
 				CF35AD982059985B00A3F17D /* Assets.xcassets */,
 				CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */,
 				CF35AD9D2059985B00A3F17D /* Info.plist */,
+				EDEA495E205A01FE004485C4 /* ListaCaminos.plist */,
+				EDEA4960205A0207004485C4 /* ListaEdificios copy.plist */,
+				EDEA4962205A020E004485C4 /* ListaEdificios.plist */,
+				EDEA4964205A0216004485C4 /* PuntosClave.plist */,
+				EDEA4966205A0235004485C4 /* Property List.plist */,
 			);
 			path = CampusAccesible;
 			sourceTree = "<group>";
@@ -277,13 +280,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF35ADC52059E97200A3F17D /* Property List.plist in Resources */,
-				CF35ADC62059E97200A3F17D /* ListaEdificios copy.plist in Resources */,
 				CF35AD9C2059985B00A3F17D /* LaunchScreen.storyboard in Resources */,
 				CF35AD992059985B00A3F17D /* Assets.xcassets in Resources */,
+				EDEA4963205A020E004485C4 /* ListaEdificios.plist in Resources */,
 				CF35AD972059985B00A3F17D /* Main.storyboard in Resources */,
-				CF35ADC32059E97200A3F17D /* ListaCaminos.plist in Resources */,
-				CF35ADC42059E97200A3F17D /* PuntosClave.plist in Resources */,
+				EDEA4961205A0207004485C4 /* ListaEdificios copy.plist in Resources */,
+				EDEA495F205A01FE004485C4 /* ListaCaminos.plist in Resources */,
+				EDEA4967205A0235004485C4 /* Property List.plist in Resources */,
+				EDEA4965205A0216004485C4 /* PuntosClave.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
