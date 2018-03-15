@@ -15,10 +15,8 @@ class MapViewController: UIViewController {
     @IBOutlet weak var tfTo: SearchTextField!
     @IBOutlet weak var mapView: GMSMapView!
     
-    var locations : NSArray!
-    var buildings : NSArray!
-    var keyPoints : NSArray!
-    var paths : NSArray!
+    var locations = [Coordinate]()
+    var paths = [Path]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,37 +34,37 @@ class MapViewController: UIViewController {
         
         // Inicializa PropertyLists
         let locationsPath = Bundle.main.path(forResource: "Property List", ofType: "plist")
-        locations = NSArray(contentsOfFile: locationsPath!)
-        let buildingsPath = Bundle.main.path(forResource: "ListaEdificios", ofType: "plist")
-        buildings = NSArray(contentsOfFile: buildingsPath!)
-        let keyPointsPath = Bundle.main.path(forResource: "PuntosClave", ofType: "plist")
-        keyPoints = NSArray(contentsOfFile: keyPointsPath!)
+        let locationsNSArray = NSArray(contentsOfFile: locationsPath!)
+        for (index, location) in locationsNSArray!.enumerated() {
+            let castLocation = location as! NSDictionary
+            locations.append(Coordinate(lat: castLocation.value(forKey: "longitud") as! Double, lon: castLocation.value(forKey: "latitud") as! Double, index: index))
+        }
         let pathsPath = Bundle.main.path(forResource: "ListaCaminos", ofType: "plist")
-        paths = NSArray(contentsOfFile: pathsPath!)
+        let pathsNSArray = NSArray(contentsOfFile: pathsPath!)
+        for path in pathsNSArray! {
+            let castPath = path as! NSDictionary
+            paths.append(Path(coord1: locations[castPath.value(forKey: "punto1") as! Int], coord2: locations[castPath.value(forKey: "punto2") as! Int]))
+        }
         
-        for (index, element) in locations.enumerated() {
+        for (index, location) in locations.enumerated() {
             let marker = GMSMarker()
-            let location = element as! NSDictionary
-            marker.position = CLLocationCoordinate2D(latitude: location.value(forKey: "longitud") as! Double, longitude: location.value(forKey: "latitud") as! Double)
-            marker.title = String(marker.position.latitude) + " " + String(marker.position.longitude)
+            marker.position = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lon)
+            marker.title = String(location.lat) + " " + String(location.lon)
             marker.snippet = String(index)
             marker.map = mapView
         }
-        
-        for element in paths {
-            let path = element as! NSDictionary
+
+        for path in paths {
             let pointPath = GMSMutablePath()
-            let point1 = path.value(forKey: "punto1") as! Int
-            let point2 = path.value(forKey: "punto2") as! Int
-            let dic1 = locations[point1] as! NSDictionary
-            let dic2 = locations[point2] as! NSDictionary
-            pointPath.add(CLLocationCoordinate2D(latitude: dic1.value(forKey: "longitud") as! Double, longitude: dic1.value(forKey: "latitud") as! Double))
-            pointPath.add(CLLocationCoordinate2D(latitude: dic2.value(forKey: "longitud") as! Double, longitude: dic2.value(forKey: "latitud") as! Double))
+            pointPath.add(CLLocationCoordinate2D(latitude: path.coord1.lat, longitude: path.coord1.lon))
+            pointPath.add(CLLocationCoordinate2D(latitude: path.coord2.lat, longitude: path.coord2.lon))
             let line = GMSPolyline(path: pointPath)
             line.map = mapView
             line.strokeWidth = 5
         }
         
+        let generator = PathCalculator(markers: locations, paths: paths, map: mapView)
+        generator.showShortestPathOnMap(fromIndex: 16, toIndex: 8)
         
         // Estilo y datos que se filtran
         tfFrom.borderStyle = UITextBorderStyle.roundedRect
