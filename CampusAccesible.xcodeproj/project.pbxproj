@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		412385BD2059C9F900A66A8F /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412385BC2059C9F900A66A8F /* CreditsViewController.swift */; };
+		413F4792205AF8A30075501F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413F4791205AF8A30075501F /* TableViewController.swift */; };
 		CF35AD902059985B00A3F17D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD8F2059985B00A3F17D /* AppDelegate.swift */; };
 		CF35AD922059985B00A3F17D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD912059985B00A3F17D /* ExploreViewController.swift */; };
 		CF35AD942059985B00A3F17D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD932059985B00A3F17D /* MapViewController.swift */; };
@@ -48,6 +49,7 @@
 		23FDB672713AA4C3F1931630 /* Pods-CampusAccesible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusAccesible.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible.debug.xcconfig"; sourceTree = "<group>"; };
 		2B7891669572F14664B02150 /* Pods-CampusAccesible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusAccesible.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible.release.xcconfig"; sourceTree = "<group>"; };
 		412385BC2059C9F900A66A8F /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		413F4791205AF8A30075501F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = Controllers/TableViewController.swift; sourceTree = "<group>"; };
 		46089EEE1235798462B74C7A /* Pods_CampusAccesible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusAccesible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35AD8C2059985B00A3F17D /* CampusAccesible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusAccesible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35AD8F2059985B00A3F17D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				ED334CFD205A3B130041E564 /* Classes */,
 				CF35AD8F2059985B00A3F17D /* AppDelegate.swift */,
 				CF35AD952059985B00A3F17D /* Main.storyboard */,
+				413F4791205AF8A30075501F /* TableViewController.swift */,
 				CF35AD982059985B00A3F17D /* Assets.xcassets */,
 				CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */,
 				CF35AD9D2059985B00A3F17D /* Info.plist */,
@@ -407,6 +410,7 @@
 				CF35AD942059985B00A3F17D /* MapViewController.swift in Sources */,
 				ED334D01205A3B840041E564 /* Path.swift in Sources */,
 				CF35AD902059985B00A3F17D /* AppDelegate.swift in Sources */,
+				413F4792205AF8A30075501F /* TableViewController.swift in Sources */,
 				ED1C226F205A2B110095FFC3 /* PathCalculator.swift in Sources */,
 				CF35AD922059985B00A3F17D /* ExploreViewController.swift in Sources */,
 				412385BD2059C9F900A66A8F /* CreditsViewController.swift in Sources */,
