@@ -14,7 +14,7 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Instalaciones del campus"
+        title = "Explora"
         
         let path = Bundle.main.path(forResource: "ListaEdificios", ofType: "plist")!
         buildingArray = NSArray(contentsOfFile: path)
@@ -104,7 +104,7 @@ class TableViewController: UITableViewController {
         exploreView.buildingImage = dic.object(forKey: "imagen") as! String
         exploreView.schedule = dic.object(forKey: "horario") as! String
         exploreView.elevator = dic.object(forKey: "elevador") as! Bool
-        exploreView.bathrooms = dic.object(forKey: "baños") as! NSArray
+        exploreView.bathrooms = dic.object(forKey: "banos") as! NSArray
     }
 
 }

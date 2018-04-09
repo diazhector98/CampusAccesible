@@ -18,6 +18,7 @@
 		CF35AD9C2059985B00A3F17D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */; };
 		CF35ADA72059985B00A3F17D /* CampusAccesibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35ADA62059985B00A3F17D /* CampusAccesibleTests.swift */; };
 		CF35ADB22059985B00A3F17D /* CampusAccesibleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35ADB12059985B00A3F17D /* CampusAccesibleUITests.swift */; };
+		CF9A7370207B34870018B2F7 /* Bulding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A736F207B34870018B2F7 /* Bulding.swift */; };
 		DB62EBA509C30313272C94A5 /* Pods_CampusAccesible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46089EEE1235798462B74C7A /* Pods_CampusAccesible.framework */; };
 		ED1C226F205A2B110095FFC3 /* PathCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C226E205A2B110095FFC3 /* PathCalculator.swift */; };
 		ED334CFC205A3A960041E564 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED334CFB205A3A960041E564 /* Coordinate.swift */; };
@@ -66,6 +67,7 @@
 		CF35ADAD2059985B00A3F17D /* CampusAccesibleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusAccesibleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35ADB12059985B00A3F17D /* CampusAccesibleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusAccesibleUITests.swift; sourceTree = "<group>"; };
 		CF35ADB32059985B00A3F17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF9A736F207B34870018B2F7 /* Bulding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bulding.swift; sourceTree = "<group>"; };
 		ED1C226E205A2B110095FFC3 /* PathCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathCalculator.swift; sourceTree = "<group>"; };
 		ED334CFB205A3A960041E564 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		ED334D00205A3B840041E564 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				ED334CFB205A3A960041E564 /* Coordinate.swift */,
 				ED1C226E205A2B110095FFC3 /* PathCalculator.swift */,
 				ED334D00205A3B840041E564 /* Path.swift */,
+				CF9A736F207B34870018B2F7 /* Bulding.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				410AF8CF207AFA1800356F70 /* CustomTableViewCell.swift in Sources */,
 				CF35AD942059985B00A3F17D /* MapViewController.swift in Sources */,
 				ED334D01205A3B840041E564 /* Path.swift in Sources */,
+				CF9A7370207B34870018B2F7 /* Bulding.swift in Sources */,
 				CF35AD902059985B00A3F17D /* AppDelegate.swift in Sources */,
 				413F4792205AF8A30075501F /* TableViewController.swift in Sources */,
 				ED1C226F205A2B110095FFC3 /* PathCalculator.swift in Sources */,

@@ -20,6 +20,9 @@ class MapViewController: UIViewController {
     var generator : PathCalculator!
     var locations = [Coordinate]()
     var paths = [Path]()
+    var buildings = [String : Building]()
+    var currentFromIndex = 0
+    var currentToIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,36 +47,19 @@ class MapViewController: UIViewController {
             let castLocation = location as! NSDictionary
             locations.append(Coordinate(lat: castLocation.value(forKey: "longitud") as! Double, lon: castLocation.value(forKey: "latitud") as! Double, index: index))
         }
+        
         let pathsPath = Bundle.main.path(forResource: "ListaCaminos", ofType: "plist")
         let pathsNSArray = NSArray(contentsOfFile: pathsPath!)
         for path in pathsNSArray! {
             let castPath = path as! NSDictionary
-            paths.append(Path(coord1: locations[castPath.value(forKey: "punto1") as! Int], coord2: locations[castPath.value(forKey: "punto2") as! Int], isAccessible: castPath.value(forKey: "accesible") as! Bool))
+            paths.append(Path(coord1: locations[castPath.value(forKey: "punto1") as! Int], coord2: locations[castPath.value(forKey: "punto2") as! Int], coord1_index: castPath.value(forKey: "punto1") as! Int, coord2_index: castPath.value(forKey: "punto2") as! Int, isAccessible: castPath.value(forKey: "accesible") as! Bool))
         }
         
-        // TESTING Muestra todos los marcadores
-        for (index, location) in locations.enumerated() {
-            let marker = GMSMarker()
-            marker.position = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lon)
-            marker.title = String(location.lat) + " " + String(location.lon)
-            marker.snippet = String(index)
-            marker.map = mapView
-        }
-        
-        // TESTING Muestra todos los caminos
-        for path in paths {
-            let pointPath = GMSMutablePath()
-            pointPath.add(CLLocationCoordinate2D(latitude: path.coord1.lat, longitude: path.coord1.lon))
-            pointPath.add(CLLocationCoordinate2D(latitude: path.coord2.lat, longitude: path.coord2.lon))
-            let line = GMSPolyline(path: pointPath)
-            line.map = mapView
-            if path.isAccessible {
-                line.strokeColor = UIColor.blue
-            }
-            else {
-                line.strokeColor = UIColor.black
-            }
-            line.strokeWidth = 5
+        let buildingsPath = Bundle.main.path(forResource: "ListaEdificios", ofType: "plist")
+        let buildingsNSArray = NSArray(contentsOfFile: buildingsPath!)
+        for building in buildingsNSArray! {
+            let castBuilding = building as! NSDictionary
+            buildings[castBuilding.value(forKey: "nombre") as! String] = (Building(name: castBuilding.value(forKey: "nombre") as! String, image: UIImage(named: castBuilding.value(forKey: "imagen") as! String)!, elevator: castBuilding.value(forKey: "elevador") as! Bool, schedule: castBuilding.value(forKey: "horario") as! String, bathrooms: castBuilding.value(forKey: "banos") as! [String], coord_index: castBuilding.value(forKey: "coord") as! Int))
         }
         
         generator = PathCalculator(markers: locations, paths: paths, map: mapView)
@@ -81,8 +67,11 @@ class MapViewController: UIViewController {
         // Estilo y datos que se filtran
         tfFrom.borderStyle = UITextBorderStyle.roundedRect
         tfTo.borderStyle = UITextBorderStyle.roundedRect
-        tfFrom.filterStrings(["Red", "Blue", "Yellow"])
-        tfTo.filterStrings(["Red", "Blue", "Yellow"])
+        let buildingNames = buildings.map({ (key: String, building: Building) -> String in
+            building.name
+        })
+        tfFrom.filterStrings(buildingNames)
+        tfTo.filterStrings(buildingNames)
         tfFrom.maxResultsListHeight = 200
         tfTo.maxResultsListHeight = 200
         
@@ -98,8 +87,38 @@ class MapViewController: UIViewController {
     }
 
     @IBAction func toggleAccessibleSwitch(_ sender: UISwitch) {
-        generator.showShortestPathOnMap(fromIndex: 16, toIndex: 8, isAccessible: isAccessibleSwitch.isOn)
+        generator.showShortestPathOnMap(fromIndex: currentFromIndex, toIndex: currentToIndex, isAccessible: isAccessibleSwitch.isOn)
     }
     
+    @IBAction func destinationChosen(_ sender: SearchTextField) {
+        let fromBuildingName = tfFrom.text
+        let toBuildingName = tfTo.text
+        if (fromBuildingName?.isEmpty)! || (toBuildingName?.isEmpty)! || buildings[fromBuildingName!] == nil || buildings[toBuildingName!] == nil {
+            print("no existe")
+            //notifica
+            return
+        }
+        
+        let fromBuilding = buildings[fromBuildingName!]!
+        let toBuilding = buildings[toBuildingName!]!
+        
+        generator.showShortestPathOnMap(fromIndex: fromBuilding.coord_index, toIndex: toBuilding.coord_index, isAccessible: false)
+        
+        let markerFrom = GMSMarker()
+        markerFrom.position = CLLocationCoordinate2D(latitude: locations[fromBuilding.coord_index].lat, longitude: locations[fromBuilding.coord_index].lon)
+        markerFrom.title = fromBuildingName
+        markerFrom.map = mapView
+        
+        let markerTo = GMSMarker()
+        markerTo.position = CLLocationCoordinate2D(latitude: locations[toBuilding.coord_index].lat, longitude: locations[toBuilding.coord_index].lon)
+        markerTo.title = fromBuildingName
+        markerTo.map = mapView
+        
+        currentFromIndex = fromBuilding.coord_index
+        currentToIndex = toBuilding.coord_index
+        let midPointLat = (locations[toBuilding.coord_index].lat + locations[fromBuilding.coord_index].lat)/2
+        let midPointLon = (locations[toBuilding.coord_index].lon + locations[fromBuilding.coord_index].lon)/2
+        mapView.animate(toLocation: CLLocationCoordinate2D(latitude: midPointLat, longitude: midPointLon))
+    }
 }
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="3294.375" y="-836.61971830985919"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Explora-->
         <scene sceneID="xUu-x8-evf">
             <objects>
                 <tableViewController id="p2e-Se-3VH" customClass="TableViewController" customModule="CampusAccesible" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +113,7 @@
                             <outlet property="delegate" destination="p2e-Se-3VH" id="sjo-qO-voa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Eox-yC-VAF"/>
+                    <navigationItem key="navigationItem" title="Explora" id="Eox-yC-VAF"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5vg-3g-vcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,7 +164,10 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="webSearch"/>
+                                <connections>
+                                    <action selector="destinationChosen:" destination="8rJ-Kc-sve" eventType="editingDidEndOnExit" id="vYz-lq-dz9"/>
+                                </connections>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xvP-cm-30n">
                                 <rect key="frame" x="251" y="468" width="51" height="31"/>

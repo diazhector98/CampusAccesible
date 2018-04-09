@@ -11,13 +11,13 @@
 		<true/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
-		<key>baños</key>
+		<key>banos</key>
 		<array>
 			<string>1 Piso</string>
 			<string>2 Piso</string>
 		</array>
 		<key>coord</key>
-		<integer>0</integer>
+		<integer>17</integer>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -28,13 +28,13 @@
 		<true/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
-		<key>baños</key>
+		<key>banos</key>
 		<array>
 			<string>1 Piso</string>
 			<string>2 Piso</string>
 		</array>
 		<key>coord</key>
-		<integer>0</integer>
+		<integer>98</integer>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -45,13 +45,13 @@
 		<true/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
-		<key>baños</key>
+		<key>banos</key>
 		<array>
 			<string>1 Piso</string>
 			<string>2 Piso</string>
 		</array>
 		<key>coord</key>
-		<integer>0</integer>
+		<integer>84</integer>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -62,13 +62,30 @@
 		<true/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
-		<key>baños</key>
+		<key>banos</key>
 		<array>
 			<string>1 Piso</string>
 			<string>2 Piso</string>
 		</array>
 		<key>coord</key>
-		<integer>0</integer>
+		<integer>70</integer>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>CIAP</string>
+		<key>imagen</key>
+		<string>ciap</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array>
+			<string>1 Piso</string>
+			<string>2 Piso</string>
+		</array>
+		<key>coord</key>
+		<integer>8</integer>
 	</dict>
 </array>
 </plist>
