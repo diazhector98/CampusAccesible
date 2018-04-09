@@ -38,7 +38,7 @@ class MapViewController: UIViewController {
         mapView.cameraTargetBounds = bounds
         
         // Inicializa PropertyLists
-        let locationsPath = Bundle.main.path(forResource: "Property List", ofType: "plist")
+        let locationsPath = Bundle.main.path(forResource: "Coords", ofType: "plist")
         let locationsNSArray = NSArray(contentsOfFile: locationsPath!)
         for (index, location) in locationsNSArray!.enumerated() {
             let castLocation = location as! NSDictionary
