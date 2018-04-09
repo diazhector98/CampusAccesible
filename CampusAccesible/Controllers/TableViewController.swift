@@ -46,9 +46,9 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
         let dic = buildingArray[indexPath.row] as! NSDictionary
         
-        cell.lbBuildingName.text = dic.object(forKey: "nombre") as? String
+        cell.lbCell.text = dic.object(forKey: "nombre") as? String
         let image = UIImage(named: (dic.object(forKey: "imagen") as! String))
-        cell.imgBuilding.image = image
+        cell.imgCell.image = image
 
         return cell
     }
