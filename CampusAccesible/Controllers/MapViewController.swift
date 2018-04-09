@@ -28,6 +28,8 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         isAccessibleSwitch.isOn = false
+        isAccessibleSwitch.backgroundColor = UIColor.white
+        isAccessibleSwitch.layer.cornerRadius = 16.0
         
         // Creación del mapa
         let camera = GMSCameraPosition.camera(withLatitude: 25.651130, longitude: -100.289599, zoom: 17.0)
