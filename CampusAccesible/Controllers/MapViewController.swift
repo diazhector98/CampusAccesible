@@ -40,6 +40,10 @@ class MapViewController: UIViewController {
         let bounds = GMSCoordinateBounds(coordinate: upperLeftBound, coordinate: lowerRightBound)
         mapView.cameraTargetBounds = bounds
         
+        // Esconde teclado cuando presiona afuera
+        let tap = UITapGestureRecognizer(target: self, action: #selector(quitaTeclado))
+        view.addGestureRecognizer(tap)
+        
         // Inicializa PropertyLists
         let locationsPath = Bundle.main.path(forResource: "Coords", ofType: "plist")
         let locationsNSArray = NSArray(contentsOfFile: locationsPath!)
@@ -94,8 +98,9 @@ class MapViewController: UIViewController {
         let fromBuildingName = tfFrom.text
         let toBuildingName = tfTo.text
         if (fromBuildingName?.isEmpty)! || (toBuildingName?.isEmpty)! || buildings[fromBuildingName!] == nil || buildings[toBuildingName!] == nil {
-            print("no existe")
-            //notifica
+            let alerta = UIAlertController(title: "Error", message: "Porfavor revisa el nombre de los edificios seleccionados.", preferredStyle: .alert)
+            alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            present(alerta, animated: true, completion: nil)
             return
         }
         
@@ -119,6 +124,10 @@ class MapViewController: UIViewController {
         let midPointLat = (locations[toBuilding.coord_index].lat + locations[fromBuilding.coord_index].lat)/2
         let midPointLon = (locations[toBuilding.coord_index].lon + locations[fromBuilding.coord_index].lon)/2
         mapView.animate(toLocation: CLLocationCoordinate2D(latitude: midPointLat, longitude: midPointLon))
+    }
+    
+    @IBAction func quitaTeclado() {
+        view.endEditing(true)
     }
 }
 
