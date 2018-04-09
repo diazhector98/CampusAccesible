@@ -9,9 +9,14 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    
+    var buildingArray : NSArray!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let path = Bundle.main.path(forResource: "ListaEdificios", ofType: "plist")!
+        buildingArray = NSArray(contentsOfFile: path)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,25 +33,28 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return buildingArray.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        let dic = buildingArray[indexPath.row] as! NSDictionary
+        
+        cell.lbBuildingName.text = dic.object(forKey: "nombre") as? String
+        cell.imgBuilding.image = UIImage(named: (dic.object(forKey: "imagen") as! String))
 
         return cell
     }
-    */
-
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+ 
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

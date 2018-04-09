@@ -5,6 +5,8 @@
 	<dict>
 		<key>nombre</key>
 		<string>Aulas 1</string>
+		<key>imagen</key>
+		<string>aulas1</string>
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
@@ -20,6 +22,8 @@
 	<dict>
 		<key>nombre</key>
 		<string>Aulas 2</string>
+		<key>imagen</key>
+		<string>aulas2</string>
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
@@ -35,6 +39,8 @@
 	<dict>
 		<key>nombre</key>
 		<string>Aulas 3</string>
+		<key>imagen</key>
+		<string>aulas3</string>
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
@@ -50,6 +56,8 @@
 	<dict>
 		<key>nombre</key>
 		<string>Aulas 4</string>
+		<key>imagen</key>
+		<string>aulas4</string>
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
