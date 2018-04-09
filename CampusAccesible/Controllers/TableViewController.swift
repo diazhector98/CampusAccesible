@@ -14,6 +14,7 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Instalaciones del campus"
         
         let path = Bundle.main.path(forResource: "ListaEdificios", ofType: "plist")!
         buildingArray = NSArray(contentsOfFile: path)
@@ -27,7 +28,7 @@ class TableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
 
     // MARK: - Table view data source
@@ -46,7 +47,8 @@ class TableViewController: UITableViewController {
         let dic = buildingArray[indexPath.row] as! NSDictionary
         
         cell.lbBuildingName.text = dic.object(forKey: "nombre") as? String
-        cell.imgBuilding.image = UIImage(named: (dic.object(forKey: "imagen") as! String))
+        let image = UIImage(named: (dic.object(forKey: "imagen") as! String))
+        cell.imgBuilding.image = image
 
         return cell
     }
@@ -90,14 +92,19 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let exploreView = segue.destination as! ExploreViewController
+        let indexP = tableView.indexPathForSelectedRow!
+        let dic = buildingArray[indexP.row] as! NSDictionary
+        
+        exploreView.buildingImage = dic.object(forKey: "imagen") as! String
+        exploreView.schedule = dic.object(forKey: "horario") as! String
+        exploreView.elevator = dic.object(forKey: "elevador") as! Bool
+        exploreView.bathrooms = dic.object(forKey: "baños") as! NSArray
     }
-    */
 
 }
