@@ -51,6 +51,7 @@ class MapViewController: UIViewController {
             paths.append(Path(coord1: locations[castPath.value(forKey: "punto1") as! Int], coord2: locations[castPath.value(forKey: "punto2") as! Int], isAccessible: castPath.value(forKey: "accesible") as! Bool))
         }
         
+        // TESTING Muestra todos los marcadores
         for (index, location) in locations.enumerated() {
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lon)
@@ -58,13 +59,20 @@ class MapViewController: UIViewController {
             marker.snippet = String(index)
             marker.map = mapView
         }
-
+        
+        // TESTING Muestra todos los caminos
         for path in paths {
             let pointPath = GMSMutablePath()
             pointPath.add(CLLocationCoordinate2D(latitude: path.coord1.lat, longitude: path.coord1.lon))
             pointPath.add(CLLocationCoordinate2D(latitude: path.coord2.lat, longitude: path.coord2.lon))
             let line = GMSPolyline(path: pointPath)
             line.map = mapView
+            if path.isAccessible {
+                line.strokeColor = UIColor.blue
+            }
+            else {
+                line.strokeColor = UIColor.black
+            }
             line.strokeWidth = 5
         }
         

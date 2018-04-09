@@ -37,6 +37,9 @@ class PathCalculator: NSObject {
     }
     
     func showShortestPathOnMap(fromIndex: Int, toIndex: Int, isAccessible: Bool) {
+        if activeLine != nil {
+            activeLine.map = nil
+        }
         var path : [GKGraphNode]
         if isAccessible {
             path = accessibleGraph.findPath(from: accessibleNodes[fromIndex], to: accessibleNodes[toIndex])
@@ -49,14 +52,14 @@ class PathCalculator: NSObject {
             let node = element as! Node
             pointPath.add(CLLocationCoordinate2D(latitude: node.lat, longitude: node.lon))
         }
-        let line = GMSPolyline(path: pointPath)
-        line.map = map
-        line.strokeWidth = 5
+        activeLine = GMSPolyline(path: pointPath)
+        activeLine.map = map
+        activeLine.strokeWidth = 5
         if isAccessible {
-            line.strokeColor = UIColor.yellow
+            activeLine.strokeColor = UIColor.yellow
         }
         else {
-            line.strokeColor = UIColor.red
+            activeLine.strokeColor = UIColor.red
         }
     }
     
