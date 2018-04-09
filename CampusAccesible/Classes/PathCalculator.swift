@@ -12,24 +12,38 @@ import GoogleMaps
 class PathCalculator: NSObject {
     
     var graph : GKGraph
+    var accessibleGraph : GKGraph
     var nodes = [Node]()
+    var accessibleNodes = [Node]()
     var map : GMSMapView
     var activeLine : GMSPolyline!
 
     init(markers : [Coordinate], paths : [Path], map: GMSMapView) {
         self.map = map
         graph = GKGraph()
+        accessibleGraph = GKGraph()
         for marker in markers {
             nodes.append(Node(lat: marker.lat, lon: marker.lon))
+            accessibleNodes.append(Node(lat: marker.lat, lon: marker.lon))
         }
         graph.add(nodes)
+        accessibleGraph.add(accessibleNodes)
         for path in paths {
             nodes[path.coord1.index].addConnection(to: nodes[path.coord2.index], weight: Float(path.distance))
+            if path.isAccessible {
+                accessibleNodes[path.coord1.index].addConnection(to: accessibleNodes[path.coord2.index], weight: Float(path.distance))
+            }
         }
     }
     
-    func showShortestPathOnMap(fromIndex: Int, toIndex: Int) {
-        let path = graph.findPath(from: nodes[fromIndex], to: nodes[toIndex])
+    func showShortestPathOnMap(fromIndex: Int, toIndex: Int, isAccessible: Bool) {
+        var path : [GKGraphNode]
+        if isAccessible {
+            path = accessibleGraph.findPath(from: accessibleNodes[fromIndex], to: accessibleNodes[toIndex])
+        }
+        else {
+            path = graph.findPath(from: nodes[fromIndex], to: nodes[toIndex])
+        }
         let pointPath = GMSMutablePath()
         for element in path {
             let node = element as! Node
@@ -38,7 +52,12 @@ class PathCalculator: NSObject {
         let line = GMSPolyline(path: pointPath)
         line.map = map
         line.strokeWidth = 5
-        line.strokeColor = UIColor.red
+        if isAccessible {
+            line.strokeColor = UIColor.yellow
+        }
+        else {
+            line.strokeColor = UIColor.red
+        }
     }
     
 }

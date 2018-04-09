@@ -14,12 +14,17 @@ class MapViewController: UIViewController {
     @IBOutlet weak var tfFrom: SearchTextField!
     @IBOutlet weak var tfTo: SearchTextField!
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var isAccessibleSwitch: UISwitch!
     
+    
+    var generator : PathCalculator!
     var locations = [Coordinate]()
     var paths = [Path]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        isAccessibleSwitch.isOn = false
         
         // Creación del mapa
         let camera = GMSCameraPosition.camera(withLatitude: 25.651130, longitude: -100.289599, zoom: 17.0)
@@ -43,7 +48,7 @@ class MapViewController: UIViewController {
         let pathsNSArray = NSArray(contentsOfFile: pathsPath!)
         for path in pathsNSArray! {
             let castPath = path as! NSDictionary
-            paths.append(Path(coord1: locations[castPath.value(forKey: "punto1") as! Int], coord2: locations[castPath.value(forKey: "punto2") as! Int]))
+            paths.append(Path(coord1: locations[castPath.value(forKey: "punto1") as! Int], coord2: locations[castPath.value(forKey: "punto2") as! Int], isAccessible: castPath.value(forKey: "accesible") as! Bool))
         }
         
         for (index, location) in locations.enumerated() {
@@ -63,8 +68,7 @@ class MapViewController: UIViewController {
             line.strokeWidth = 5
         }
         
-        let generator = PathCalculator(markers: locations, paths: paths, map: mapView)
-        generator.showShortestPathOnMap(fromIndex: 16, toIndex: 8)
+        generator = PathCalculator(markers: locations, paths: paths, map: mapView)
         
         // Estilo y datos que se filtran
         tfFrom.borderStyle = UITextBorderStyle.roundedRect
@@ -77,6 +81,7 @@ class MapViewController: UIViewController {
         // Pone Text Fields arriba del mapa
         self.view.bringSubview(toFront: tfFrom)
         self.view.bringSubview(toFront: tfTo)
+        self.view.bringSubview(toFront: isAccessibleSwitch)
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,6 +89,9 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func toggleAccessibleSwitch(_ sender: UISwitch) {
+        generator.showShortestPathOnMap(fromIndex: 16, toIndex: 8, isAccessible: isAccessibleSwitch.isOn)
+    }
+    
 }
 
