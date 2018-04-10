@@ -56,7 +56,7 @@ class PathCalculator: NSObject {
         activeLine.map = map
         activeLine.strokeWidth = 5
         if isAccessible {
-            activeLine.strokeColor = UIColor.yellow
+            activeLine.strokeColor = UIColor.blue
         }
         else {
             activeLine.strokeColor = UIColor.red

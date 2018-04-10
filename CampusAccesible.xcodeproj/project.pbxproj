@@ -10,6 +10,7 @@
 		410AF8CF207AFA1800356F70 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410AF8CE207AFA1800356F70 /* CustomTableViewCell.swift */; };
 		412385BD2059C9F900A66A8F /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412385BC2059C9F900A66A8F /* CreditsViewController.swift */; };
 		413F4792205AF8A30075501F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413F4791205AF8A30075501F /* TableViewController.swift */; };
+		41F70C80207BF35B00B35DD9 /* BathroomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F70C7F207BF35B00B35DD9 /* BathroomsViewController.swift */; };
 		CF35AD902059985B00A3F17D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD8F2059985B00A3F17D /* AppDelegate.swift */; };
 		CF35AD922059985B00A3F17D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD912059985B00A3F17D /* ExploreViewController.swift */; };
 		CF35AD942059985B00A3F17D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD932059985B00A3F17D /* MapViewController.swift */; };
@@ -52,6 +53,7 @@
 		410AF8CE207AFA1800356F70 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = Controllers/CustomTableViewCell.swift; sourceTree = "<group>"; };
 		412385BC2059C9F900A66A8F /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		413F4791205AF8A30075501F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = Controllers/TableViewController.swift; sourceTree = "<group>"; };
+		41F70C7F207BF35B00B35DD9 /* BathroomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathroomsViewController.swift; sourceTree = "<group>"; };
 		46089EEE1235798462B74C7A /* Pods_CampusAccesible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusAccesible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35AD8C2059985B00A3F17D /* CampusAccesible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusAccesible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35AD8F2059985B00A3F17D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		ED334CFE205A3B2D0041E564 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				41F70C7F207BF35B00B35DD9 /* BathroomsViewController.swift */,
 				CF35AD912059985B00A3F17D /* ExploreViewController.swift */,
 				CF35AD932059985B00A3F17D /* MapViewController.swift */,
 				412385BC2059C9F900A66A8F /* CreditsViewController.swift */,
@@ -409,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F70C80207BF35B00B35DD9 /* BathroomsViewController.swift in Sources */,
 				410AF8CF207AFA1800356F70 /* CustomTableViewCell.swift in Sources */,
 				CF35AD942059985B00A3F17D /* MapViewController.swift in Sources */,
 				ED334D01205A3B840041E564 /* Path.swift in Sources */,

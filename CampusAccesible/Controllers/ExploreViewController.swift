@@ -60,9 +60,26 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 2 {
+            performSegue(withIdentifier: "ShowBathrooms") {
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
     
+    
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let bathroomsView = segue.destination as! BathroomsViewController
+        
+        bathroomsView.bathrooms = bathrooms as NSArray?
+        bathroomsView.buildingImage = buildingImage as String?
+     }
 }
 
