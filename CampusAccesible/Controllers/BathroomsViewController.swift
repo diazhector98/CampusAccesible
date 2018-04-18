@@ -36,6 +36,8 @@ class BathroomsViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+        cell.isUserInteractionEnabled = false
+        
         cell.textLabel?.text = bathrooms[indexPath.row] as? String
         
         return cell

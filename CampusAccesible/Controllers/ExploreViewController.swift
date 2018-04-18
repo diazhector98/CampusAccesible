@@ -42,7 +42,9 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         if indexPath.row == 0 {
             cell.imageView?.image = #imageLiteral(resourceName: "clock")
             cell.textLabel?.text = schedule
+            cell.isUserInteractionEnabled = false
         } else if indexPath.row == 1 {
+            cell.isUserInteractionEnabled = false
             if elevator {
                 cell.imageView?.image = #imageLiteral(resourceName: "check")
             } else {
@@ -50,6 +52,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             cell.textLabel?.text = "Elevador"
         } else if indexPath.row == 2 {
+            cell.accessoryType = .disclosureIndicator
             if bathrooms.count > 0 {
                 cell.imageView?.image = #imageLiteral(resourceName: "check")
             } else {
