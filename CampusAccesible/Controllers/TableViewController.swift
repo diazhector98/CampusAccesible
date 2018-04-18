@@ -49,12 +49,14 @@ class TableViewController: UITableViewController {
         cell.lbCell.text = dic.object(forKey: "nombre") as? String
         let image = UIImage(named: (dic.object(forKey: "imagen") as! String))
         cell.imgCell.image = image
+        
+        cell.accessoryType = .disclosureIndicator
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 55
     }
  
     /*
