@@ -18,14 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-XL-XIH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-XL-XIH">
                                 <rect key="frame" x="0.0" y="64" width="320" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gST-my-r0M">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gST-my-r0M">
                                 <rect key="frame" x="0.0" y="240" width="320" height="178"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="llh-Cr-pi5"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="ia1-U0-fkv" rowHeight="49" style="IBUITableViewCellStyleDefault" id="Y8a-GI-3xf">
                                         <rect key="frame" x="0.0" y="28" width="320" height="49"/>
@@ -48,6 +49,16 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gST-my-r0M" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="1oZ-uy-h8e"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="gST-my-r0M" secondAttribute="bottom" constant="101" id="3kj-wa-gHx"/>
+                            <constraint firstItem="bg5-XL-XIH" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="8Fm-sZ-Ylr"/>
+                            <constraint firstItem="gST-my-r0M" firstAttribute="top" secondItem="bg5-XL-XIH" secondAttribute="bottom" id="QHc-sU-3m5"/>
+                            <constraint firstItem="gST-my-r0M" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="ahw-Fw-CXY"/>
+                            <constraint firstItem="bg5-XL-XIH" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="jFA-JM-8pE"/>
+                            <constraint firstItem="bg5-XL-XIH" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="uqz-6S-o1E"/>
+                            <constraint firstItem="gST-my-r0M" firstAttribute="top" secondItem="bg5-XL-XIH" secondAttribute="bottom" id="vYu-zj-AwE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explora" image="Explore" id="acW-dT-cKf"/>
@@ -69,14 +80,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ibG-Bo-aGR">
-                                <rect key="frame" x="0.0" y="58" width="320" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ibG-Bo-aGR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="234"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AWD-d3-40b">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AWD-d3-40b">
                                 <rect key="frame" x="0.0" y="234" width="320" height="181"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="181" id="8FG-GL-R1a"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="PEN-bj-UcT" style="IBUITableViewCellStyleDefault" id="cdI-K8-Pqk">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
@@ -99,6 +111,16 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GlP-wB-oW8" firstAttribute="bottom" secondItem="AWD-d3-40b" secondAttribute="bottom" constant="104" id="DcT-8N-f0u"/>
+                            <constraint firstItem="AWD-d3-40b" firstAttribute="top" secondItem="ibG-Bo-aGR" secondAttribute="bottom" id="TLx-cr-ruN"/>
+                            <constraint firstItem="ibG-Bo-aGR" firstAttribute="trailing" secondItem="GlP-wB-oW8" secondAttribute="trailing" id="Vv8-Hg-mxa"/>
+                            <constraint firstItem="AWD-d3-40b" firstAttribute="top" secondItem="ibG-Bo-aGR" secondAttribute="bottom" id="Ydx-VG-k8s"/>
+                            <constraint firstItem="ibG-Bo-aGR" firstAttribute="top" secondItem="yDS-YZ-fN9" secondAttribute="top" id="ZL9-Rx-61P"/>
+                            <constraint firstItem="AWD-d3-40b" firstAttribute="leading" secondItem="GlP-wB-oW8" secondAttribute="leading" id="maa-Lx-sWO"/>
+                            <constraint firstItem="ibG-Bo-aGR" firstAttribute="leading" secondItem="GlP-wB-oW8" secondAttribute="leading" id="tiY-oj-8Nf"/>
+                            <constraint firstItem="AWD-d3-40b" firstAttribute="trailing" secondItem="GlP-wB-oW8" secondAttribute="trailing" id="wks-os-y5U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GlP-wB-oW8"/>
                     </view>
                     <connections>
@@ -182,8 +204,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Phc-oh-vL8" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="209" height="388"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phc-oh-vL8" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="Origen" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFb-8t-SI5" customClass="SearchTextField" customModule="SearchTextField">
