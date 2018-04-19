@@ -30,6 +30,8 @@ class MapViewController: UIViewController {
         isAccessibleSwitch.isOn = false
         isAccessibleSwitch.backgroundColor = UIColor.white
         isAccessibleSwitch.layer.cornerRadius = 16.0
+        let blue = UIColor(red: 65.0/255.0, green: 80.0/255.0, blue: 182/255.0, alpha: 1.0)
+        isAccessibleSwitch.onTintColor = blue
         
         // Creación del mapa
         let camera = GMSCameraPosition.camera(withLatitude: 25.651130, longitude: -100.289599, zoom: 17.0)
@@ -68,6 +70,33 @@ class MapViewController: UIViewController {
             buildings[castBuilding.value(forKey: "nombre") as! String] = (Building(name: castBuilding.value(forKey: "nombre") as! String, image: UIImage(named: castBuilding.value(forKey: "imagen") as! String)!, elevator: castBuilding.value(forKey: "elevador") as! Bool, schedule: castBuilding.value(forKey: "horario") as! String, bathrooms: castBuilding.value(forKey: "banos") as! [String], coord_index: castBuilding.value(forKey: "coord") as! Int))
         }
         
+        if false {
+            // TESTING Muestra todos los marcadores
+            for (index, location) in locations.enumerated() {
+                let marker = GMSMarker()
+                marker.position = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lon)
+                marker.title = String(location.lat) + " " + String(location.lon)
+                marker.snippet = String(index)
+                marker.map = mapView
+            }
+            
+            // TESTING Muestra todos los caminos
+            for path in paths {
+                let pointPath = GMSMutablePath()
+                pointPath.add(CLLocationCoordinate2D(latitude: path.coord1.lat, longitude: path.coord1.lon))
+                pointPath.add(CLLocationCoordinate2D(latitude: path.coord2.lat, longitude: path.coord2.lon))
+                let line = GMSPolyline(path: pointPath)
+                line.map = mapView
+                if path.isAccessible {
+                    line.strokeColor = UIColor.blue
+                }
+                else {
+                    line.strokeColor = UIColor.black
+                }
+                line.strokeWidth = 5
+            }
+        }
+        
         generator = PathCalculator(markers: locations, paths: paths, map: mapView)
         
         // Estilo y datos que se filtran
@@ -76,10 +105,20 @@ class MapViewController: UIViewController {
         let buildingNames = buildings.map({ (key: String, building: Building) -> String in
             building.name
         })
+        
+        // Agrega los dropdowns
         tfFrom.filterStrings(buildingNames)
         tfTo.filterStrings(buildingNames)
         tfFrom.maxResultsListHeight = 200
         tfTo.maxResultsListHeight = 200
+        
+        // Actualiza ruta cuando se selecciona valor del dropdown
+        tfFrom.itemSelectionHandler = didSelectOrigin(_:_:)
+        tfTo.itemSelectionHandler = didSelectDestination(_:_:)
+        
+        // Actualiza ruta cuando se escribe un valor valido
+        tfFrom.addTarget(self, action: #selector(tfDidChange(_:)), for: .editingChanged)
+        tfTo.addTarget(self, action: #selector(tfDidChange(_:)), for: .editingChanged)
         
         // Pone Text Fields arriba del mapa
         self.view.bringSubview(toFront: tfFrom)
@@ -96,6 +135,10 @@ class MapViewController: UIViewController {
         generator.showShortestPathOnMap(fromIndex: currentFromIndex, toIndex: currentToIndex, isAccessible: isAccessibleSwitch.isOn)
     }
     
+    @objc func tfDidChange(_ textField: UITextField) {
+        updateRoute()
+    }
+    
     @IBAction func destinationChosen(_ sender: SearchTextField) {
         let fromBuildingName = tfFrom.text
         let toBuildingName = tfTo.text
@@ -105,31 +148,42 @@ class MapViewController: UIViewController {
             present(alerta, animated: true, completion: nil)
             return
         }
+        updateRoute()
+    }
+    
+    func didSelectDestination(_ filteredResults: [SearchTextFieldItem], _ index: Int) -> Void {
+        tfTo.text = filteredResults[index].title
+        updateRoute()
+    }
+    
+    func didSelectOrigin(_ filteredResults: [SearchTextFieldItem], _ index: Int) -> Void {
+        tfFrom.text = filteredResults[index].title
+        updateRoute()
+    }
+    
+    func updateRoute() {
+        let fromBuildingName = tfFrom.text
+        let toBuildingName = tfTo.text
+        if !(fromBuildingName?.isEmpty)! && buildings[fromBuildingName!] != nil {
+            generator.setFromMarker(index: (buildings[fromBuildingName!]?.coord_index)!)
+        }
+        if !(toBuildingName?.isEmpty)! && buildings[toBuildingName!] != nil {
+            generator.setToMarker(index: (buildings[toBuildingName!]?.coord_index)!)
+        }
+        if (fromBuildingName?.isEmpty)! || (toBuildingName?.isEmpty)! || buildings[fromBuildingName!] == nil || buildings[toBuildingName!] == nil {
+            return
+        }
         
         let fromBuilding = buildings[fromBuildingName!]!
         let toBuilding = buildings[toBuildingName!]!
-        
-        generator.showShortestPathOnMap(fromIndex: fromBuilding.coord_index, toIndex: toBuilding.coord_index, isAccessible: false)
-        
-        let markerFrom = GMSMarker()
-        markerFrom.position = CLLocationCoordinate2D(latitude: locations[fromBuilding.coord_index].lat, longitude: locations[fromBuilding.coord_index].lon)
-        markerFrom.title = fromBuildingName
-        markerFrom.map = mapView
-        
-        let markerTo = GMSMarker()
-        markerTo.position = CLLocationCoordinate2D(latitude: locations[toBuilding.coord_index].lat, longitude: locations[toBuilding.coord_index].lon)
-        markerTo.title = fromBuildingName
-        markerTo.map = mapView
-        
         currentFromIndex = fromBuilding.coord_index
         currentToIndex = toBuilding.coord_index
-        let midPointLat = (locations[toBuilding.coord_index].lat + locations[fromBuilding.coord_index].lat)/2
-        let midPointLon = (locations[toBuilding.coord_index].lon + locations[fromBuilding.coord_index].lon)/2
-        mapView.animate(toLocation: CLLocationCoordinate2D(latitude: midPointLat, longitude: midPointLon))
+        generator.showShortestPathOnMap(fromIndex: currentFromIndex, toIndex: currentToIndex, isAccessible: isAccessibleSwitch.isOn)
     }
     
     @IBAction func quitaTeclado() {
         view.endEditing(true)
     }
+    
+    
 }
-

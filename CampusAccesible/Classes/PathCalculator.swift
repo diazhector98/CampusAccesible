@@ -16,7 +16,9 @@ class PathCalculator: NSObject {
     var nodes = [Node]()
     var accessibleNodes = [Node]()
     var map : GMSMapView
-    var activeLine : GMSPolyline!
+    var activeLine = GMSPolyline()
+    var activeMarkerFrom : GMSMarker!
+    var activeMarkerTo : GMSMarker!
 
     init(markers : [Coordinate], paths : [Path], map: GMSMapView) {
         self.map = map
@@ -34,12 +36,12 @@ class PathCalculator: NSObject {
                 accessibleNodes[path.coord1.index].addConnection(to: accessibleNodes[path.coord2.index], weight: Float(path.distance))
             }
         }
+        activeLine.strokeWidth = 5
+        
     }
     
     func showShortestPathOnMap(fromIndex: Int, toIndex: Int, isAccessible: Bool) {
-        if activeLine != nil {
-            activeLine.map = nil
-        }
+        activeLine.map = nil
         var path : [GKGraphNode]
         if isAccessible {
             path = accessibleGraph.findPath(from: accessibleNodes[fromIndex], to: accessibleNodes[toIndex])
@@ -52,16 +54,50 @@ class PathCalculator: NSObject {
             let node = element as! Node
             pointPath.add(CLLocationCoordinate2D(latitude: node.lat, longitude: node.lon))
         }
-        activeLine = GMSPolyline(path: pointPath)
-        activeLine.map = map
-        activeLine.strokeWidth = 5
+        activeLine.path = pointPath
         if isAccessible {
             activeLine.strokeColor = UIColor.blue
         }
         else {
             activeLine.strokeColor = UIColor.red
         }
+        activeLine.map = map
+
+        
+        let midPointLat = (nodes[toIndex].lat + nodes[fromIndex].lat)/2 + 0.0005
+        let midPointLon = (nodes[toIndex].lon + nodes[fromIndex].lon)/2
+        map.animate(toLocation: CLLocationCoordinate2D(latitude: midPointLat, longitude: midPointLon))
+
+        
     }
+    
+    func setFromMarker(index: Int) {
+        if activeMarkerFrom != nil {
+            if activeMarkerFrom.position.latitude == nodes[index].lat && activeMarkerFrom.position.longitude == nodes[index].lon {
+                return
+            }
+            activeMarkerFrom.map = nil
+        }
+
+        activeMarkerFrom = GMSMarker()
+        activeMarkerFrom.appearAnimation = GMSMarkerAnimation.pop
+        activeMarkerFrom.position = CLLocationCoordinate2D(latitude: nodes[index].lat, longitude: nodes[index].lon)
+        activeMarkerFrom.map = map
+    }
+    
+    func setToMarker(index: Int) {
+        if activeMarkerTo != nil {
+            if activeMarkerTo.position.latitude == nodes[index].lat && activeMarkerTo.position.longitude == nodes[index].lon {
+                return
+            }
+            activeMarkerTo.map = nil
+        }
+        activeMarkerTo = GMSMarker()
+        activeMarkerTo.appearAnimation = GMSMarkerAnimation.pop
+        activeMarkerTo.position = CLLocationCoordinate2D(latitude: nodes[index].lat, longitude: nodes[index].lon)
+        activeMarkerTo.map = map
+    }
+    
     
 }
 
