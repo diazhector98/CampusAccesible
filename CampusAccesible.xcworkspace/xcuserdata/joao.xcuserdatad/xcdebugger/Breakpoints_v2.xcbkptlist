@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CampusAccesible/Controllers/MapViewController.swift"
+            timestampString = "546198610.118567"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "updateRoute(textField:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CampusAccesible.MapViewController.updateRoute() -&gt; ()"
+                  moduleName = "CampusAccesible"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joao/GDrive/Carrera/6%20semestre/Moviles%20iOS/CampusAccesible/CampusAccesible/Controllers/MapViewController.swift"
+                  timestampString = "546197349.824975"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "2581">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CampusAccesible.MapViewController.updateRoute() -&gt; ()"
+                  moduleName = "CampusAccesible"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joao/GDrive/Carrera/6%20semestre/Moviles%20iOS/CampusAccesible/CampusAccesible/Controllers/MapViewController.swift"
+                  timestampString = "546197349.8280261"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "8546">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -98,6 +98,29 @@ class PathCalculator: NSObject {
         activeMarkerTo.map = map
     }
     
+    func showBuildingCoords(indexes: [Int]) {
+        hideRoute()
+        var markers = [GMSMarker]()
+        for index in indexes {
+            let marker = GMSMarker()
+            marker.appearAnimation = GMSMarkerAnimation.pop
+            marker.position = CLLocationCoordinate2D(latitude: nodes[index].lat, longitude: nodes[index].lon)
+            marker.icon = GMSMarker.markerImage(with: UIColor.green)
+            marker.map = map
+            markers.append(marker)
+        }
+    }
+    
+    func hideRoute() {
+        if activeMarkerTo != nil {
+            activeMarkerTo.map = nil
+        }
+        if activeMarkerFrom != nil {
+            activeMarkerFrom.map = nil
+        }
+        activeLine.map = nil
+    }
+    
     
 }
 

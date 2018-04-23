@@ -25,4 +25,15 @@ class Path: NSObject {
         let distY = coord1.lon - coord2.lon
         self.distance = sqrt((distX * distX) + (distY * distY))
     }
+    
+    static func loadPathArray(locations: [Coordinate]) -> [Path] {
+        var paths = [Path]()
+        let pathsPath = Bundle.main.path(forResource: "ListaCaminos", ofType: "plist")
+        let pathsNSArray = NSArray(contentsOfFile: pathsPath!)
+        for path in pathsNSArray! {
+            let castPath = path as! NSDictionary
+            paths.append(Path(coord1: locations[castPath.value(forKey: "punto1") as! Int], coord2: locations[castPath.value(forKey: "punto2") as! Int], coord1_index: castPath.value(forKey: "punto1") as! Int, coord2_index: castPath.value(forKey: "punto2") as! Int, isAccessible: castPath.value(forKey: "accesible") as! Bool))
+        }
+        return paths
+    }
 }

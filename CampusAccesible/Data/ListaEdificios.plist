@@ -17,7 +17,9 @@
 			<string>2 Piso</string>
 		</array>
 		<key>coord</key>
-		<integer>17</integer>
+		<array>
+			<integer>17</integer>
+		</array>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -34,7 +36,9 @@
 			<string>2 Piso</string>
 		</array>
 		<key>coord</key>
-		<integer>98</integer>
+		<array>
+			<integer>98</integer>
+		</array>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -51,7 +55,9 @@
 			<string>2 Piso</string>
 		</array>
 		<key>coord</key>
-		<integer>84</integer>
+		<array>
+			<integer>84</integer>
+		</array>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -68,7 +74,9 @@
 			<string>2 Piso</string>
 		</array>
 		<key>coord</key>
-		<integer>70</integer>
+		<array>
+			<integer>70</integer>
+		</array>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -85,7 +93,11 @@
 			<string>2 Piso</string>
 		</array>
 		<key>coord</key>
-		<integer>6</integer>
+		<array>
+			<integer>10</integer>
+			<integer>9</integer>
+			<integer>6</integer>
+		</array>
 	</dict>
 </array>
 </plist>

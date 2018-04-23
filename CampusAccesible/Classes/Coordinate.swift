@@ -18,4 +18,15 @@ class Coordinate: NSObject {
         self.lon = lon
         self.index = index
     }
+    
+    static func loadCoordinateArray() -> [Coordinate] {
+        var locations = [Coordinate]()
+        let locationsPath = Bundle.main.path(forResource: "Coords", ofType: "plist")
+        let locationsNSArray = NSArray(contentsOfFile: locationsPath!)
+        for (index, location) in locationsNSArray!.enumerated() {
+            let castLocation = location as! NSDictionary
+            locations.append(Coordinate(lat: castLocation.value(forKey: "longitud") as! Double, lon: castLocation.value(forKey: "latitud") as! Double, index: index))
+        }
+        return locations
+    }
 }
