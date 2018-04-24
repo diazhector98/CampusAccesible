@@ -21,8 +21,6 @@ class MapViewController: UIViewController {
     var locations = [Coordinate]()
     var paths = [Path]()
     var buildings = [String : Building]()
-    var currentFromIndex = 0
-    var currentToIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,7 +113,8 @@ class MapViewController: UIViewController {
     }
 
     @IBAction func toggleAccessibleSwitch(_ sender: UISwitch) {
-        generator.showShortestPathOnMap(fromIndex: currentFromIndex, toIndex: currentToIndex, isAccessible: isAccessibleSwitch.isOn)
+        generator.isAccessible = isAccessibleSwitch.isOn
+        generator.showShortestPathOnMap()
     }
     
     @objc func tfDidChange(_ textField: SearchTextField) {
@@ -144,33 +143,48 @@ class MapViewController: UIViewController {
     }
     
     func updateRoute(textField: SearchTextField) {
-        let fromBuildingName = tfFrom.text
-        let toBuildingName = tfTo.text
+        generator.isAccessible = isAccessibleSwitch.isOn
+        
+        // Esconde el dropdown si el valor actual es un valor valido
+        if !(textField.text?.isEmpty)! && buildings[textField.text!] != nil {
+            textField.hideResultsList()
+        }
+        
+        // Checa si el edificio tiene varias coordenadas
         if (textField.text != nil && buildings[textField.text!] != nil) {
             guard let coords = buildings[textField.text!]?.coord_index else {
                 return
             }
             if coords.count > 1 {
-                generator.showBuildingCoords(indexes: coords)
+                // Muestra las coordenadas como marcadores para que el usuario seleccione uno
+                generator.showBuildingCoords(indexes: coords, isOrigin: textField == tfFrom)
                 return
             }
             
         }
-        if !(fromBuildingName?.isEmpty)! && buildings[fromBuildingName!] != nil {
-            generator.setFromMarker(index: (buildings[fromBuildingName!]?.coord_index[0])!)
-        }
-        if !(toBuildingName?.isEmpty)! && buildings[toBuildingName!] != nil {
-            generator.setToMarker(index: (buildings[toBuildingName!]?.coord_index[0])!)
-        }
-        if (fromBuildingName?.isEmpty)! || (toBuildingName?.isEmpty)! || buildings[fromBuildingName!] == nil || buildings[toBuildingName!] == nil {
-            return
+        
+        // Si el valor es valido, muestra el marcador
+        if !((textField.text?.isEmpty)!) && buildings[textField.text!] != nil {
+            if textField == tfFrom {
+                generator.setFromMarker(index: (buildings[textField.text!]?.coord_index[0])!)
+            }
+            else {
+                generator.setToMarker(index: (buildings[textField.text!]?.coord_index[0])!)
+            }
+            
+            // Calcula ruta (de ser posible)
+            generator.showShortestPathOnMap()
         }
         
-        let fromBuilding = buildings[fromBuildingName!]!
-        let toBuilding = buildings[toBuildingName!]!
-        currentFromIndex = fromBuilding.coord_index[0]
-        currentToIndex = toBuilding.coord_index[0]
-        generator.showShortestPathOnMap(fromIndex: currentFromIndex, toIndex: currentToIndex, isAccessible: isAccessibleSwitch.isOn)
+        // El valor no es valido, quita marcador
+        else {
+            if textField == tfFrom {
+                generator.removeFromMarker()
+            }
+            else {
+                generator.removeToMarker()
+            }
+        }
     }
     
     @IBAction func quitaTeclado() {

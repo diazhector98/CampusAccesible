@@ -9,27 +9,40 @@
 import UIKit
 import GameplayKit
 import GoogleMaps
-class PathCalculator: NSObject {
+class PathCalculator: NSObject, GMSMapViewDelegate {
     
     var graph : GKGraph
     var accessibleGraph : GKGraph
     var nodes = [Node]()
     var accessibleNodes = [Node]()
     var map : GMSMapView
+    
     var activeLine = GMSPolyline()
+    var activeFromIndex : Int!
+    var activeToIndex : Int!
+    var isAccessible : Bool!
     var activeMarkerFrom : GMSMarker!
     var activeMarkerTo : GMSMarker!
+    var selectableMarkers = [GMSMarker]()
+    var originIsActive : Bool!
+    var isSelectingMarker = false
 
     init(markers : [Coordinate], paths : [Path], map: GMSMapView) {
         self.map = map
+        
+        // Crea los grafos
         graph = GKGraph()
         accessibleGraph = GKGraph()
+        
+        // Agrega los nodos
         for marker in markers {
             nodes.append(Node(lat: marker.lat, lon: marker.lon))
             accessibleNodes.append(Node(lat: marker.lat, lon: marker.lon))
         }
         graph.add(nodes)
         accessibleGraph.add(accessibleNodes)
+        
+        // Agrega las conexiones
         for path in paths {
             nodes[path.coord1.index].addConnection(to: nodes[path.coord2.index], weight: Float(path.distance))
             if path.isAccessible {
@@ -40,15 +53,29 @@ class PathCalculator: NSObject {
         
     }
     
-    func showShortestPathOnMap(fromIndex: Int, toIndex: Int, isAccessible: Bool) {
+    func showShortestPathOnMap() {
+        // Esconde la ruta actual
         activeLine.map = nil
+        
+        // Si no hay un indice valido de origen y destino termina
+        if activeFromIndex == nil || activeToIndex == nil {
+            return
+        }
+        
+        // Asegura que se esten mostrando ambos marcadores
+        activeMarkerTo.map = map
+        activeMarkerFrom.map = map
+        
+        // Calcula la ruta mas corta
         var path : [GKGraphNode]
         if isAccessible {
-            path = accessibleGraph.findPath(from: accessibleNodes[fromIndex], to: accessibleNodes[toIndex])
+            path = accessibleGraph.findPath(from: accessibleNodes[activeFromIndex], to: accessibleNodes[activeToIndex])
         }
         else {
-            path = graph.findPath(from: nodes[fromIndex], to: nodes[toIndex])
+            path = graph.findPath(from: nodes[activeFromIndex], to: nodes[activeToIndex])
         }
+        
+        // Muestra la ruta
         let pointPath = GMSMutablePath()
         for element in path {
             let node = element as! Node
@@ -63,60 +90,132 @@ class PathCalculator: NSObject {
         }
         activeLine.map = map
 
-        
-        let midPointLat = (nodes[toIndex].lat + nodes[fromIndex].lat)/2 + 0.0005
-        let midPointLon = (nodes[toIndex].lon + nodes[fromIndex].lon)/2
+        // Mueve el mapa
+        let midPointLat = (nodes[activeToIndex].lat + nodes[activeFromIndex].lat)/2 + 0.0005
+        let midPointLon = (nodes[activeToIndex].lon + nodes[activeFromIndex].lon)/2
         map.animate(toLocation: CLLocationCoordinate2D(latitude: midPointLat, longitude: midPointLon))
 
         
     }
     
     func setFromMarker(index: Int) {
-        if activeMarkerFrom != nil {
-            if activeMarkerFrom.position.latitude == nodes[index].lat && activeMarkerFrom.position.longitude == nodes[index].lon {
+        if activeFromIndex != nil {
+            if activeFromIndex == index {
                 return
             }
-            activeMarkerFrom.map = nil
+            removeFromMarker()
         }
-
+        removeFromMarker()
+        activeFromIndex = index
         activeMarkerFrom = GMSMarker()
         activeMarkerFrom.appearAnimation = GMSMarkerAnimation.pop
         activeMarkerFrom.position = CLLocationCoordinate2D(latitude: nodes[index].lat, longitude: nodes[index].lon)
         activeMarkerFrom.map = map
     }
     
-    func setToMarker(index: Int) {
+    func removeFromMarker() {
+        if isSelectingMarker {
+            removeSelectableMarkers()
+        }
+        activeFromIndex = nil
+        if activeMarkerFrom != nil {
+            activeMarkerFrom.map = nil
+            activeMarkerFrom = nil
+        }
+        
+        activeLine.map = nil
+        
+        // Verifica que el otro marcador se este mostrando, si es posible
         if activeMarkerTo != nil {
-            if activeMarkerTo.position.latitude == nodes[index].lat && activeMarkerTo.position.longitude == nodes[index].lon {
+            activeMarkerTo.map = map
+        }
+    }
+    
+    func setToMarker(index: Int) {
+        if activeToIndex != nil {
+            if activeToIndex == index {
                 return
             }
-            activeMarkerTo.map = nil
+            removeToMarker()
         }
+        
+        activeToIndex = index
         activeMarkerTo = GMSMarker()
         activeMarkerTo.appearAnimation = GMSMarkerAnimation.pop
         activeMarkerTo.position = CLLocationCoordinate2D(latitude: nodes[index].lat, longitude: nodes[index].lon)
         activeMarkerTo.map = map
     }
     
-    func showBuildingCoords(indexes: [Int]) {
+    func removeToMarker() {
+        if isSelectingMarker {
+            removeSelectableMarkers()
+        }
+        activeToIndex = nil
+        if activeMarkerTo != nil {
+            activeMarkerTo.map = nil
+            activeMarkerTo = nil
+        }
+        
+        // Verifica que el otro marcador se este mostrando, si es posible
+        if activeMarkerFrom != nil {
+            activeMarkerFrom.map = map
+        }
+        activeLine.map = nil
+    }
+    
+    
+    // Se utiliza para mostrar varios markers cuando un edificio tiene varias coordenadas posibles
+    func showBuildingCoords(indexes: [Int], isOrigin: Bool) {
         hideRoute()
-        var markers = [GMSMarker]()
         for index in indexes {
             let marker = GMSMarker()
             marker.appearAnimation = GMSMarkerAnimation.pop
             marker.position = CLLocationCoordinate2D(latitude: nodes[index].lat, longitude: nodes[index].lon)
-            marker.icon = GMSMarker.markerImage(with: UIColor.green)
+            marker.icon = GMSMarker.markerImage(with: UIColor.blue)
             marker.map = map
-            markers.append(marker)
+            marker.title = String(index)
+            selectableMarkers.append(marker)
         }
+        map.delegate = self
+        originIsActive = isOrigin
+        isSelectingMarker = true
     }
     
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        // Verifica si el usuario hizo click en uno de los markers mostrados por showBuildingCoords
+        if isSelectingMarker {
+            if originIsActive {
+                setFromMarker(index: Int(marker.title!)!)
+            }
+            else {
+                setToMarker(index: Int(marker.title!)!)
+            }
+            removeSelectableMarkers()
+            showShortestPathOnMap()
+            return true
+        }
+        return false
+    }
+    
+    // Elimina los marcadores creados por showBuildingCoords
+    func removeSelectableMarkers() {
+        for marker in selectableMarkers {
+            marker.map = nil
+        }
+        selectableMarkers.removeAll()
+        isSelectingMarker = false
+    }
+    
+    // Esconde los marcadores y la ruta
     func hideRoute() {
         if activeMarkerTo != nil {
             activeMarkerTo.map = nil
         }
         if activeMarkerFrom != nil {
             activeMarkerFrom.map = nil
+        }
+        if isSelectingMarker {
+            removeSelectableMarkers()
         }
         activeLine.map = nil
     }

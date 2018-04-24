@@ -401,6 +401,7 @@ open class SearchTextField: UITextField {
     
     open func hideResultsList() {
         if let tableFrame:CGRect = tableView?.frame {
+            clearResults()
             let newFrame = CGRect(x: tableFrame.origin.x, y: tableFrame.origin.y, width: tableFrame.size.width, height: 0.0)
             UIView.animate(withDuration: 0.2, animations: { [weak self] in
                 self?.tableView?.frame = newFrame
