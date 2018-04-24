@@ -52,7 +52,7 @@ class MapViewController: UIViewController {
         paths = Path.loadPathArray(locations: locations)
         buildings = Building.loadBuildingMap()
         
-        if false {
+        if true {
             // TESTING Muestra todos los marcadores
             for (index, location) in locations.enumerated() {
                 let marker = GMSMarker()
