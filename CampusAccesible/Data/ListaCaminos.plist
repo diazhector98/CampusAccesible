@@ -1242,5 +1242,13 @@
 		<key>accesible</key>
 		<true/>
 	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>41</integer>
+		<key>punto2</key>
+		<integer>38</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
 </array>
 </plist>
