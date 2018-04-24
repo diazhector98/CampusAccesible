@@ -824,5 +824,11 @@
 		<key>latitud</key>
 		<real>-100.290757</real>
 	</dict>
+	<dict>
+		<key>longitud</key>
+		<real>25.650922</real>
+		<key>latitud</key>
+		<real>-100.289805</real>
+	</dict>
 </array>
 </plist>

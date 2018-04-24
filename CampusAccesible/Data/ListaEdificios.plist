@@ -39,6 +39,7 @@
 		<key>coord</key>
 		<array>
 			<integer>98</integer>
+			<integer>137</integer>
 		</array>
 	</dict>
 	<dict>
@@ -58,6 +59,7 @@
 		<key>coord</key>
 		<array>
 			<integer>84</integer>
+			<integer>136</integer>
 		</array>
 	</dict>
 	<dict>
@@ -65,6 +67,49 @@
 		<string>Aulas 4</string>
 		<key>imagen</key>
 		<string>aulas4</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array>
+			<string>1 Piso</string>
+			<string>2 Piso</string>
+		</array>
+		<key>coord</key>
+		<array>
+			<integer>70</integer>
+			<integer>135</integer>
+			<integer>75</integer>
+			<integer>71</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Aulas 6</string>
+		<key>imagen</key>
+		<string>aulas6</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array>
+			<string>1 Piso</string>
+			<string>2 Piso</string>
+		</array>
+		<key>coord</key>
+		<array>
+			<integer>35</integer>
+			<integer>33</integer>
+			<integer>32</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Aulas 7</string>
+		<key>imagen</key>
+		<string>aulas7</string>
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
@@ -99,6 +144,124 @@
 			<integer>9</integer>
 			<integer>6</integer>
 			<integer>133</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Centrales</string>
+		<key>imagen</key>
+		<string>centrales</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array>
+			<string>1 Piso</string>
+			<string>2 Piso</string>
+		</array>
+		<key>coord</key>
+		<array>
+			<integer>51</integer>
+			<integer>125</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Centro de Biotecnología</string>
+		<key>imagen</key>
+		<string>centroBiotecnologia</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array>
+			<string>1 Piso</string>
+			<string>2 Piso</string>
+		</array>
+		<key>coord</key>
+		<array>
+			<integer>131</integer>
+			<integer>12</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Centro Estudiantil</string>
+		<key>imagen</key>
+		<string>centroEstudiantil</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array>
+			<string>1 Piso</string>
+			<string>2 Piso</string>
+		</array>
+		<key>coord</key>
+		<array>
+			<integer>78</integer>
+			<integer>80</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>CETEC</string>
+		<key>imagen</key>
+		<string>cetec</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array>
+			<string>1 Piso</string>
+			<string>2 Piso</string>
+		</array>
+		<key>coord</key>
+		<array>
+			<integer>90</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Gimnasio</string>
+		<key>imagen</key>
+		<string>gimnasio</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array>
+			<string>1 Piso</string>
+			<string>2 Piso</string>
+		</array>
+		<key>coord</key>
+		<array>
+			<integer>63</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Rectoría</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array>
+			<string>1 Piso</string>
+			<string>2 Piso</string>
+		</array>
+		<key>coord</key>
+		<array>
+			<integer>112</integer>
+			<integer>105</integer>
 		</array>
 	</dict>
 </array>
