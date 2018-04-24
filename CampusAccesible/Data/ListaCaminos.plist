@@ -1180,7 +1180,7 @@
 	</dict>
 	<dict>
 		<key>punto1</key>
-		<integer>1</integer>
+		<integer>134</integer>
 		<key>punto2</key>
 		<integer>0</integer>
 		<key>accesible</key>
@@ -1209,6 +1209,38 @@
 		<integer>5</integer>
 		<key>accesible</key>
 		<false/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>133</integer>
+		<key>punto2</key>
+		<integer>6</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>133</integer>
+		<key>punto2</key>
+		<integer>134</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>1</integer>
+		<key>punto2</key>
+		<integer>134</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>11</integer>
+		<key>punto2</key>
+		<integer>7</integer>
+		<key>accesible</key>
+		<true/>
 	</dict>
 </array>
 </plist>

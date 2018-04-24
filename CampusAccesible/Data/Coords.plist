@@ -800,5 +800,17 @@
 		<key>latitud</key>
 		<real>-100.291063</real>
 	</dict>
+	<dict>
+		<key>longitud</key>
+		<real>25.652696</real>
+		<key>latitud</key>
+		<real>-100.290457</real>
+	</dict>
+	<dict>
+		<key>longitud</key>
+		<real>25.652536</real>
+		<key>latitud</key>
+		<real>-100.290457</real>
+	</dict>
 </array>
 </plist>

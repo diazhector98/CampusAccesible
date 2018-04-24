@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import SearchTextField
+import NotificationBannerSwift
 
 class MapViewController: UIViewController {
     @IBOutlet weak var tfFrom: SearchTextField!
@@ -125,9 +126,8 @@ class MapViewController: UIViewController {
         let fromBuildingName = tfFrom.text
         let toBuildingName = tfTo.text
         if (fromBuildingName?.isEmpty)! || (toBuildingName?.isEmpty)! || buildings[fromBuildingName!] == nil || buildings[toBuildingName!] == nil {
-            let alerta = UIAlertController(title: "Error", message: "Porfavor revisa el nombre de los edificios seleccionados.", preferredStyle: .alert)
-            alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-            present(alerta, animated: true, completion: nil)
+            let banner = NotificationBanner(title: "Error", subtitle: "Nombre de edificio inválido.", style: .warning)
+            banner.show()
             return
         }
     }

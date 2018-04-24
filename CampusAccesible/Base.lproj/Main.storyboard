@@ -209,7 +209,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="Origen" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFb-8t-SI5" customClass="SearchTextField" customModule="SearchTextField">
-                                <rect key="frame" x="30" y="40" width="260" height="40"/>
+                                <rect key="frame" x="30" y="80" width="260" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="vGb-Po-wAA"/>
                                 </constraints>
@@ -218,7 +218,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="Destino" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iFB-qB-ua7" customClass="SearchTextField" customModule="SearchTextField">
-                                <rect key="frame" x="30" y="100" width="260" height="40"/>
+                                <rect key="frame" x="30" y="140" width="260" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="80q-e3-GDy"/>
                                 </constraints>
@@ -254,7 +254,7 @@
                             <constraint firstItem="aFb-8t-SI5" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="30" id="Sdn-dm-4RS"/>
                             <constraint firstItem="xvP-cm-30n" firstAttribute="leading" secondItem="z9l-lq-Fcz" secondAttribute="trailing" constant="10" id="XOm-49-OKv"/>
                             <constraint firstItem="Phc-oh-vL8" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="aIE-nW-2NB"/>
-                            <constraint firstItem="aFb-8t-SI5" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="20" id="fWo-qL-Rll"/>
+                            <constraint firstItem="aFb-8t-SI5" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="60" id="fWo-qL-Rll"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="iFB-qB-ua7" secondAttribute="trailing" constant="30" id="pTf-i3-0L0"/>
                             <constraint firstItem="iFB-qB-ua7" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="30" id="sBw-20-dE1"/>
                             <constraint firstItem="Phc-oh-vL8" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="x3k-5y-h19"/>

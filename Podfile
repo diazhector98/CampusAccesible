@@ -4,4 +4,5 @@ target 'CampusAccesible' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'SearchTextField'
+  pod 'NotificationBannerSwift'
 end

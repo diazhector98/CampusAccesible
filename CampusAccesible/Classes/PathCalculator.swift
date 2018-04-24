@@ -9,6 +9,8 @@
 import UIKit
 import GameplayKit
 import GoogleMaps
+import NotificationBannerSwift
+
 class PathCalculator: NSObject, GMSMapViewDelegate {
     
     var graph : GKGraph
@@ -94,6 +96,7 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
         let midPointLat = (nodes[activeToIndex].lat + nodes[activeFromIndex].lat)/2 + 0.0005
         let midPointLon = (nodes[activeToIndex].lon + nodes[activeFromIndex].lon)/2
         map.animate(toLocation: CLLocationCoordinate2D(latitude: midPointLat, longitude: midPointLon))
+        map.animate(toZoom: 17.0)
 
         
     }
@@ -167,6 +170,10 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
     // Se utiliza para mostrar varios markers cuando un edificio tiene varias coordenadas posibles
     func showBuildingCoords(indexes: [Int], isOrigin: Bool) {
         hideRoute()
+        
+        var midPointLat = 0.0
+        var midPointLon = 0.0
+
         for index in indexes {
             let marker = GMSMarker()
             marker.appearAnimation = GMSMarkerAnimation.pop
@@ -175,10 +182,21 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
             marker.map = map
             marker.title = String(index)
             selectableMarkers.append(marker)
+            
+            midPointLat += nodes[index].lat
+            midPointLon += nodes[index].lon
         }
         map.delegate = self
         originIsActive = isOrigin
         isSelectingMarker = true
+        let banner = NotificationBanner(title: "Selecciona la ubicación deseada", subtitle: "El edificio seleccionado tiene varias secciones.", style: .info)
+        banner.show()
+        
+        midPointLon /= Double(indexes.count)
+        midPointLat /= Double(indexes.count)
+        midPointLat += 0.0005
+        map.animate(toLocation: CLLocationCoordinate2D(latitude: midPointLat, longitude: midPointLon))
+        map.animate(toZoom: 18)
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
