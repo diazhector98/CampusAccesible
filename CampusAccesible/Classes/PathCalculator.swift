@@ -79,10 +79,31 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
         
         // Muestra la ruta
         let pointPath = GMSMutablePath()
+        var minLat = 999999999.0
+        var minLon = 999999999.0
+        var maxLat = -999999999.0
+        var maxLon = -999999999.0
         for element in path {
             let node = element as! Node
             pointPath.add(CLLocationCoordinate2D(latitude: node.lat, longitude: node.lon))
+            if node.lat > maxLat {
+                maxLat = node.lat
+            }
+            if node.lat < minLat {
+                minLat = node.lat
+            }
+            if node.lon > maxLon {
+                maxLon = node.lon
+            }
+            if node.lon < minLon {
+                minLon = node.lon
+            }
         }
+        
+        let distance = maxLat - minLat
+        maxLat += distance/0.004004 * 0.0025
+        
+        let coordinateBounds = GMSCoordinateBounds(coordinate: CLLocationCoordinate2D(latitude: maxLat, longitude: maxLon), coordinate: CLLocationCoordinate2D(latitude: minLat, longitude: minLon))
         activeLine.path = pointPath
         if isAccessible {
             activeLine.strokeColor = UIColor.blue
@@ -96,7 +117,8 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
         let midPointLat = (nodes[activeToIndex].lat + nodes[activeFromIndex].lat)/2 + 0.0005
         let midPointLon = (nodes[activeToIndex].lon + nodes[activeFromIndex].lon)/2
         map.animate(toLocation: CLLocationCoordinate2D(latitude: midPointLat, longitude: midPointLon))
-        map.animate(toZoom: 17.0)
+        let update = GMSCameraUpdate.fit(coordinateBounds)
+        map.animate(with: update)
 
         
     }
@@ -174,6 +196,11 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
         var midPointLat = 0.0
         var midPointLon = 0.0
 
+        var minLat = 999999999.0
+        var minLon = 999999999.0
+        var maxLat = -999999999.0
+        var maxLon = -999999999.0
+        
         for index in indexes {
             let marker = GMSMarker()
             marker.appearAnimation = GMSMarkerAnimation.pop
@@ -185,7 +212,28 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
             
             midPointLat += nodes[index].lat
             midPointLon += nodes[index].lon
+            
+            if nodes[index].lat > maxLat {
+                maxLat = nodes[index].lat
+            }
+            if nodes[index].lat < minLat {
+                minLat = nodes[index].lat
+            }
+            if nodes[index].lon > maxLon {
+                maxLon = nodes[index].lon
+            }
+            if nodes[index].lon < minLon {
+                minLon = nodes[index].lon
+            }
         }
+        
+        let distance = maxLat - minLat
+        maxLat += distance/0.004004 * 0.0025
+        minLat -= 0.001
+        maxLat += 0.001
+        
+        let coordinateBounds = GMSCoordinateBounds(coordinate: CLLocationCoordinate2D(latitude: maxLat, longitude: maxLon), coordinate: CLLocationCoordinate2D(latitude: minLat, longitude: minLon))
+        
         map.delegate = self
         originIsActive = isOrigin
         isSelectingMarker = true
@@ -196,7 +244,8 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
         midPointLat /= Double(indexes.count)
         midPointLat += 0.0005
         map.animate(toLocation: CLLocationCoordinate2D(latitude: midPointLat, longitude: midPointLon))
-        map.animate(toZoom: 18)
+        let update = GMSCameraUpdate.fit(coordinateBounds)
+        map.animate(with: update)
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {

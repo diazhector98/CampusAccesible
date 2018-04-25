@@ -33,11 +33,11 @@ class MapViewController: UIViewController {
         isAccessibleSwitch.onTintColor = blue
         
         // Creación del mapa
-        let camera = GMSCameraPosition.camera(withLatitude: 25.651130, longitude: -100.289599, zoom: 17.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 25.6515, longitude: -100.289599, zoom: 16.5)
         mapView.camera = camera
 
         // Restricciones del movimiento del mapa
-        mapView.setMinZoom(17.0, maxZoom: 21.0)
+        mapView.setMinZoom(16.0, maxZoom: 21.0)
         let upperLeftBound = CLLocationCoordinate2D(latitude: 25.653485, longitude: -100.292080)
         let lowerRightBound = CLLocationCoordinate2D(latitude: 25.648031, longitude: -100.286508)
         let bounds = GMSCoordinateBounds(coordinate: upperLeftBound, coordinate: lowerRightBound)
@@ -119,6 +119,16 @@ class MapViewController: UIViewController {
     }
     
     @objc func tfDidChange(_ textField: SearchTextField) {
+        if generator.isSelectingMarker {
+            if generator.originIsActive {
+                if textField == tfTo {
+                    tfFrom.text = ""
+                }
+            }
+            else if textField == tfFrom {
+                tfTo.text = ""
+            }
+        }
         updateRoute(textField: textField)
     }
     
