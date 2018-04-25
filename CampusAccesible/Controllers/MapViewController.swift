@@ -11,7 +11,7 @@ import GoogleMaps
 import SearchTextField
 import NotificationBannerSwift
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var tfFrom: SearchTextField!
     @IBOutlet weak var tfTo: SearchTextField!
     @IBOutlet weak var mapView: GMSMapView!
@@ -22,6 +22,7 @@ class MapViewController: UIViewController {
     var locations = [Coordinate]()
     var paths = [Path]()
     var buildings = [String : Building]()
+    var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,10 @@ class MapViewController: UIViewController {
         // Creación del mapa
         let camera = GMSCameraPosition.camera(withLatitude: 25.6515, longitude: -100.289599, zoom: 16.5)
         mapView.camera = camera
-
+        self.mapView?.isMyLocationEnabled = true
+        self.locationManager.delegate = self
+        self.locationManager.startUpdatingLocation()
+        
         // Restricciones del movimiento del mapa
         mapView.setMinZoom(16.0, maxZoom: 21.0)
         let upperLeftBound = CLLocationCoordinate2D(latitude: 25.653485, longitude: -100.292080)
@@ -197,9 +201,14 @@ class MapViewController: UIViewController {
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last
+        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 17.0)
+        self.mapView?.animate(to: camera)
+        self.locationManager.stopUpdatingLocation()
+    }
+    
     @IBAction func quitaTeclado() {
         view.endEditing(true)
     }
-    
-    
 }
