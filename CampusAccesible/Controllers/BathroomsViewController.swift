@@ -35,10 +35,17 @@ class BathroomsViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let dic = bathrooms[indexPath.row] as! NSDictionary
         
         cell.isUserInteractionEnabled = false
         
-        cell.textLabel?.text = bathrooms[indexPath.row] as? String
+        cell.textLabel?.text = dic.object(forKey: "nombre") as? String
+        
+        if (dic.object(forKey: "ambulatorio") as? Bool)! {
+            cell.imageView?.image = #imageLiteral(resourceName: "Accessibility")
+        }
+        
+     
         
         return cell
     }

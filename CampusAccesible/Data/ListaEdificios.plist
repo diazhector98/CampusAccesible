@@ -13,10 +13,30 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso (Ambulatorio)</string>
-			<string>2 Piso</string>
-			<string>3 Piso</string>
-			<string>4 Piso</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>3 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>4 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>
@@ -35,10 +55,30 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso (Ambulatorio)</string>
-			<string>2 Piso</string>
-			<string>3 Piso</string>
-			<string>4 Piso</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>3 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>4 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>
@@ -57,10 +97,30 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso (Ambulatorio)</string>
-			<string>2 Piso</string>
-			<string>3 Piso</string>
-			<string>4 Piso</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>3 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>4 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>
@@ -79,10 +139,30 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso (Ambulatorio)</string>
-			<string>2 Piso</string>
-			<string>3 Piso</string>
-			<string>4 Piso</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>3 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>4 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>
@@ -103,10 +183,30 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 piso (Ambulatorio)</string>
-			<string>2 Piso</string>
-			<string>3 Piso</string>
-			<string>4 Piso</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>3 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>4 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>
@@ -126,10 +226,30 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso (Ambulatorio)</string>
-			<string>2 Piso</string>
-			<string>3 Piso</string>
-			<string>4 Piso</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>3 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>4 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>
@@ -147,12 +267,42 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso (Ambulatorio)</string>
-			<string>2 Piso (Ambulatorio)</string>
-			<string>3 Piso (Ambulatorio)</string>
-			<string>4 Piso (Ambulatorio)</string>
-			<string>5 Piso (Ambulatorio)</string>
-			<string>6 Piso (Ambulatorio)</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>3 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>4 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>5 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>6 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>
@@ -173,7 +323,12 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso (Ambulatorio)</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>
@@ -192,8 +347,18 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso</string>
-			<string>2 Piso</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>
@@ -212,8 +377,18 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso (Ambulatorio)</string>
-			<string>2 Piso</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>
@@ -232,9 +407,18 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>Sótano</string>
-			<string>1 Piso</string>
-			<string>2 Piso</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>Sótano</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>
@@ -252,7 +436,12 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso (Ambulatorio)</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>
@@ -270,8 +459,18 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso</string>
-			<string>2 Piso</string>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<false/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
 		</array>
 		<key>coord</key>
 		<array>

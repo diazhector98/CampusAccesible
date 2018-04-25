@@ -13,10 +13,10 @@ class Building: NSObject {
     var image : UIImage
     var elevator : Bool
     var schedule : String
-    var bathrooms : [String]
+    var bathrooms : [NSDictionary]
     var coord_index : [Int]
     
-    init(name: String, image: UIImage, elevator: Bool, schedule: String, bathrooms: [String], coord_index: [Int]) {
+    init(name: String, image: UIImage, elevator: Bool, schedule: String, bathrooms: [NSDictionary], coord_index: [Int]) {
         self.name = name
         self.image = image
         self.elevator = elevator
@@ -31,7 +31,7 @@ class Building: NSObject {
         let buildingsNSArray = NSArray(contentsOfFile: buildingsPath!)
         for building in buildingsNSArray! {
             let castBuilding = building as! NSDictionary
-            buildings[castBuilding.value(forKey: "nombre") as! String] = (Building(name: castBuilding.value(forKey: "nombre") as! String, image: UIImage(named: castBuilding.value(forKey: "imagen") as! String)!, elevator: castBuilding.value(forKey: "elevador") as! Bool, schedule: castBuilding.value(forKey: "horario") as! String, bathrooms: castBuilding.value(forKey: "banos") as! [String], coord_index: castBuilding.value(forKey: "coord") as! [Int]))
+            buildings[castBuilding.value(forKey: "nombre") as! String] = (Building(name: castBuilding.value(forKey: "nombre") as! String, image: UIImage(named: castBuilding.value(forKey: "imagen") as! String)!, elevator: castBuilding.value(forKey: "elevador") as! Bool, schedule: castBuilding.value(forKey: "horario") as! String, bathrooms: castBuilding.value(forKey: "banos") as! [NSDictionary], coord_index: castBuilding.value(forKey: "coord") as! [Int]))
         }
         return buildings
     }
