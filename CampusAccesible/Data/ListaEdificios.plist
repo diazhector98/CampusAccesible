@@ -8,13 +8,15 @@
 		<key>imagen</key>
 		<string>aulas1</string>
 		<key>elevador</key>
-		<true/>
+		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso</string>
+			<string>1 Piso (Ambulatorio)</string>
 			<string>2 Piso</string>
+			<string>3 Piso</string>
+			<string>4 Piso</string>
 		</array>
 		<key>coord</key>
 		<array>
@@ -28,13 +30,15 @@
 		<key>imagen</key>
 		<string>aulas2</string>
 		<key>elevador</key>
-		<true/>
+		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso</string>
+			<string>1 Piso (Ambulatorio)</string>
 			<string>2 Piso</string>
+			<string>3 Piso</string>
+			<string>4 Piso</string>
 		</array>
 		<key>coord</key>
 		<array>
@@ -48,13 +52,15 @@
 		<key>imagen</key>
 		<string>aulas3</string>
 		<key>elevador</key>
-		<true/>
+		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso</string>
+			<string>1 Piso (Ambulatorio)</string>
 			<string>2 Piso</string>
+			<string>3 Piso</string>
+			<string>4 Piso</string>
 		</array>
 		<key>coord</key>
 		<array>
@@ -68,13 +74,15 @@
 		<key>imagen</key>
 		<string>aulas4</string>
 		<key>elevador</key>
-		<true/>
+		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso</string>
+			<string>1 Piso (Ambulatorio)</string>
 			<string>2 Piso</string>
+			<string>3 Piso</string>
+			<string>4 Piso</string>
 		</array>
 		<key>coord</key>
 		<array>
@@ -95,8 +103,10 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso</string>
+			<string>1 piso (Ambulatorio)</string>
 			<string>2 Piso</string>
+			<string>3 Piso</string>
+			<string>4 Piso</string>
 		</array>
 		<key>coord</key>
 		<array>
@@ -111,13 +121,15 @@
 		<key>imagen</key>
 		<string>aulas7</string>
 		<key>elevador</key>
-		<true/>
+		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso</string>
+			<string>1 Piso (Ambulatorio)</string>
 			<string>2 Piso</string>
+			<string>3 Piso</string>
+			<string>4 Piso</string>
 		</array>
 		<key>coord</key>
 		<array>
@@ -135,8 +147,12 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso</string>
-			<string>2 Piso</string>
+			<string>1 Piso (Ambulatorio)</string>
+			<string>2 Piso (Ambulatorio)</string>
+			<string>3 Piso (Ambulatorio)</string>
+			<string>4 Piso (Ambulatorio)</string>
+			<string>5 Piso (Ambulatorio)</string>
+			<string>6 Piso (Ambulatorio)</string>
 		</array>
 		<key>coord</key>
 		<array>
@@ -152,13 +168,12 @@
 		<key>imagen</key>
 		<string>centrales</string>
 		<key>elevador</key>
-		<true/>
+		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso</string>
-			<string>2 Piso</string>
+			<string>1 Piso (Ambulatorio)</string>
 		</array>
 		<key>coord</key>
 		<array>
@@ -192,12 +207,12 @@
 		<key>imagen</key>
 		<string>centroEstudiantil</string>
 		<key>elevador</key>
-		<true/>
+		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso</string>
+			<string>1 Piso (Ambulatorio)</string>
 			<string>2 Piso</string>
 		</array>
 		<key>coord</key>
@@ -217,6 +232,7 @@
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
+			<string>Sótano</string>
 			<string>1 Piso</string>
 			<string>2 Piso</string>
 		</array>
@@ -231,13 +247,12 @@
 		<key>imagen</key>
 		<string>gimnasio</string>
 		<key>elevador</key>
-		<true/>
+		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
 		<array>
-			<string>1 Piso</string>
-			<string>2 Piso</string>
+			<string>1 Piso (Ambulatorio)</string>
 		</array>
 		<key>coord</key>
 		<array>

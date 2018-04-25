@@ -58,7 +58,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
             } else {
                 cell.imageView?.image = #imageLiteral(resourceName: "cross")
             }
-            cell.textLabel?.text = "Baños Ambulatorios"
+            cell.textLabel?.text = "Baños"
         }
         return cell
     }
