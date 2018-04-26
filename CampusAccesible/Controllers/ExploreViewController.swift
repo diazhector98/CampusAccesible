@@ -18,6 +18,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     var schedule : String!
     var elevator : Bool!
     var bathrooms : NSArray!
+    var buildingName : String!
 
     
     override func viewDidLoad() {
@@ -25,6 +26,8 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         imgBuilding.image = UIImage(named: buildingImage)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.title = buildingName
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,28 +40,28 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PExploreTableViewCell
         
         if indexPath.row == 0 {
-            cell.imageView?.image = #imageLiteral(resourceName: "clock")
-            cell.textLabel?.text = schedule
+            cell.imgView?.image = #imageLiteral(resourceName: "clock")
+            cell.lbTitle?.text = schedule
             cell.isUserInteractionEnabled = false
         } else if indexPath.row == 1 {
             cell.isUserInteractionEnabled = false
             if elevator {
-                cell.imageView?.image = #imageLiteral(resourceName: "check")
+                cell.imgView?.image = #imageLiteral(resourceName: "checkmark")
             } else {
-                cell.imageView?.image = #imageLiteral(resourceName: "cross")
+                cell.imgView?.image = #imageLiteral(resourceName: "cross")
             }
-            cell.textLabel?.text = "Elevador"
+            cell.lbTitle?.text = "Elevador"
         } else if indexPath.row == 2 {
             cell.accessoryType = .disclosureIndicator
             if bathrooms.count > 0 {
-                cell.imageView?.image = #imageLiteral(resourceName: "check")
+                cell.imgView?.image = #imageLiteral(resourceName: "checkmark")
             } else {
-                cell.imageView?.image = #imageLiteral(resourceName: "cross")
+                cell.imgView?.image = #imageLiteral(resourceName: "cross")
             }
-            cell.textLabel?.text = "Baños"
+            cell.lbTitle?.text = "Baños"
         }
         return cell
     }
@@ -71,7 +74,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 55
     }
     
     

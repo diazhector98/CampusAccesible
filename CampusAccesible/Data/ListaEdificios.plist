@@ -75,7 +75,7 @@
 			</dict>
 			<dict>
 				<key>ambulatorio</key>
-				<true/>
+				<false/>
 				<key>nombre</key>
 				<string>4 Piso</string>
 			</dict>

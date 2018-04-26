@@ -107,6 +107,7 @@ class TableViewController: UITableViewController {
         exploreView.schedule = dic.object(forKey: "horario") as! String
         exploreView.elevator = dic.object(forKey: "elevador") as! Bool
         exploreView.bathrooms = dic.object(forKey: "banos") as! NSArray
+        exploreView.buildingName = dic.object(forKey: "nombre") as! String
     }
 
 }
