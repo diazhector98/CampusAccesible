@@ -12,7 +12,7 @@ import GoogleMaps
 import NotificationBannerSwift
 
 class PathCalculator: NSObject, GMSMapViewDelegate {
-    
+    var view : UIView
     var graph : GKGraph
     var accessibleGraph : GKGraph
     var nodes = [Node]()
@@ -31,9 +31,9 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
     
     let banner = NotificationBanner(title: "Selecciona la ubicación deseada", subtitle: "El edificio seleccionado tiene varias secciones.", style: .info)
 
-    init(markers : [Coordinate], paths : [Path], map: GMSMapView) {
+    init(markers : [Coordinate], paths : [Path], map: GMSMapView, view: UIView) {
         self.map = map
-        
+        self.view = view
         // Crea los grafos
         graph = GKGraph()
         accessibleGraph = GKGraph()
@@ -236,7 +236,6 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
         
         let coordinateBounds = GMSCoordinateBounds(coordinate: CLLocationCoordinate2D(latitude: maxLat, longitude: maxLon), coordinate: CLLocationCoordinate2D(latitude: minLat, longitude: minLon))
         
-        map.delegate = self
         originIsActive = isOrigin
         isSelectingMarker = true
         
@@ -291,6 +290,9 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
         activeLine.map = nil
     }
     
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        view.endEditing(true)
+    }
     
 }
 

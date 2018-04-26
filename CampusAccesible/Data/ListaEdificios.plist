@@ -258,6 +258,35 @@
 	</dict>
 	<dict>
 		<key>nombre</key>
+		<string>Biblioteca</string>
+		<key>imagen</key>
+		<string>biblioteca</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>4 Piso</string>
+			</dict>
+		</array>
+		<key>coord</key>
+		<array>
+			<integer>120</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
 		<string>CIAP</string>
 		<key>imagen</key>
 		<string>ciap</string>

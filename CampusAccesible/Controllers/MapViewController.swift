@@ -47,10 +47,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let bounds = GMSCoordinateBounds(coordinate: upperLeftBound, coordinate: lowerRightBound)
         mapView.cameraTargetBounds = bounds
         
-        // Esconde teclado cuando presiona afuera
-        let tap = UITapGestureRecognizer(target: self, action: #selector(quitaTeclado))
-        view.addGestureRecognizer(tap)
-        
         // Inicializa PropertyLists
         locations = Coordinate.loadCoordinateArray()
         paths = Path.loadPathArray(locations: locations)
@@ -83,8 +79,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
         
-        generator = PathCalculator(markers: locations, paths: paths, map: mapView)
-        
+        generator = PathCalculator(markers: locations, paths: paths, map: mapView, view: view)
+        mapView.delegate = generator
         // Estilo y datos que se filtran
         tfFrom.borderStyle = UITextBorderStyle.roundedRect
         tfTo.borderStyle = UITextBorderStyle.roundedRect
@@ -204,8 +200,5 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.locationManager.stopUpdatingLocation()
     }
-    
-    @IBAction func quitaTeclado() {
-        view.endEditing(true)
-    }
+
 }
