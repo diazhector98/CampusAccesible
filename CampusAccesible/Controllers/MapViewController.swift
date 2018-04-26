@@ -34,7 +34,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         isAccessibleSwitch.onTintColor = blue
         
         // Creación del mapa
-        let camera = GMSCameraPosition.camera(withLatitude: 25.6515, longitude: -100.289599, zoom: 16.5)
+        let camera = GMSCameraPosition.camera(withLatitude: 25.6515, longitude: -100.289599, zoom: 16.9)
         mapView.camera = camera
         self.mapView?.isMyLocationEnabled = true
         self.locationManager.delegate = self
@@ -202,9 +202,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.last
-        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 17.0)
-        self.mapView?.animate(to: camera)
         self.locationManager.stopUpdatingLocation()
     }
     

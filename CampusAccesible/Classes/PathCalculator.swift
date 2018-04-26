@@ -28,6 +28,8 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
     var selectableMarkers = [GMSMarker]()
     var originIsActive : Bool!
     var isSelectingMarker = false
+    
+    let banner = NotificationBanner(title: "Selecciona la ubicación deseada", subtitle: "El edificio seleccionado tiene varias secciones.", style: .info)
 
     init(markers : [Coordinate], paths : [Path], map: GMSMapView) {
         self.map = map
@@ -237,7 +239,8 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
         map.delegate = self
         originIsActive = isOrigin
         isSelectingMarker = true
-        let banner = NotificationBanner(title: "Selecciona la ubicación deseada", subtitle: "El edificio seleccionado tiene varias secciones.", style: .info)
+        
+        banner.autoDismiss = false
         banner.show()
         
         midPointLon /= Double(indexes.count)
@@ -271,6 +274,7 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
         }
         selectableMarkers.removeAll()
         isSelectingMarker = false
+        banner.dismiss()
     }
     
     // Esconde los marcadores y la ruta
