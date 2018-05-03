@@ -29,7 +29,7 @@ class PathCalculator: NSObject, GMSMapViewDelegate {
     var originIsActive : Bool!
     var isSelectingMarker = false
     
-    let banner = NotificationBanner(title: "Selecciona la ubicación deseada", subtitle: "El edificio seleccionado tiene varias secciones.", style: .info)
+    let banner = NotificationBanner(title: "Selecciona la ubicación deseada", subtitle: "El lugar seleccionado tiene varias ubicaciones.", style: .info)
 
     init(markers : [Coordinate], paths : [Path], map: GMSMapView, view: UIView) {
         self.map = map

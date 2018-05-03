@@ -11,7 +11,16 @@ import GoogleMaps
 import SearchTextField
 import NotificationBannerSwift
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, 
+CLLocationManagerDelegate {
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     @IBOutlet weak var tfFrom: SearchTextField!
     @IBOutlet weak var tfTo: SearchTextField!
     @IBOutlet weak var mapView: GMSMapView!
@@ -84,13 +93,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         // Estilo y datos que se filtran
         tfFrom.borderStyle = UITextBorderStyle.roundedRect
         tfTo.borderStyle = UITextBorderStyle.roundedRect
-        let buildingNames = buildings.map({ (key: String, building: Building) -> String in
+        var buildingNames = buildings.map({ (key: String, building: Building) -> String in
             building.name
         })
+        buildingNames = buildingNames.sorted(by: <)
+        
         
         // Agrega los dropdowns
         tfFrom.filterStrings(buildingNames)
         tfTo.filterStrings(buildingNames)
+        tfFrom.startVisible = true
+        tfTo.startVisible = true
         tfFrom.maxResultsListHeight = 200
         tfTo.maxResultsListHeight = 200
         

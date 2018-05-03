@@ -456,6 +456,35 @@
 	</dict>
 	<dict>
 		<key>nombre</key>
+		<string>DAF</string>
+		<key>imagen</key>
+		<string>cetec</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>Sótano</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+		</array>
+		<key>coord</key>
+		<array>
+			<integer>62</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
 		<string>Gimnasio</string>
 		<key>imagen</key>
 		<string>gimnasio</string>
@@ -505,6 +534,269 @@
 		<array>
 			<integer>112</integer>
 			<integer>105</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Expreso Tec</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>142</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>TECstore</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>18</integer>
+			<integer>85</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Starbucks</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>18</integer>
+			<integer>120</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Super Salads</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>18</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Panem</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>127</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Subway</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>143</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Doña Tota</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>143</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Oriental Wok</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>143</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Señor Latino</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>144</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Nectarworks</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>144</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Oxxo</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>80</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Jubileo</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>80</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>The Food Box</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>145</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Bancomer</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>146</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Circuito Tec</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>153</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Entrada</string>
+		<key>imagen</key>
+		<string>rectoria</string>
+		<key>elevador</key>
+		<false/>
+		<key>horario</key>
+		<string>7am - 7pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>117</integer>
+			<integer>142</integer>
+			<integer>147</integer>
+			<integer>64</integer>
+			<integer>149</integer>
+			<integer>150</integer>
 		</array>
 	</dict>
 </array>

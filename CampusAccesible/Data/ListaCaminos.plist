@@ -222,14 +222,6 @@
 		<key>punto1</key>
 		<integer>99</integer>
 		<key>punto2</key>
-		<integer>101</integer>
-		<key>accesible</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>punto1</key>
-		<integer>99</integer>
-		<key>punto2</key>
 		<integer>120</integer>
 		<key>accesible</key>
 		<true/>
@@ -327,14 +319,6 @@
 		<integer>125</integer>
 		<key>punto2</key>
 		<integer>55</integer>
-		<key>accesible</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>punto1</key>
-		<integer>51</integer>
-		<key>punto2</key>
-		<integer>125</integer>
 		<key>accesible</key>
 		<true/>
 	</dict>
@@ -964,14 +948,6 @@
 	</dict>
 	<dict>
 		<key>punto1</key>
-		<integer>13</integer>
-		<key>punto2</key>
-		<integer>15</integer>
-		<key>accesible</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>punto1</key>
 		<integer>17</integer>
 		<key>punto2</key>
 		<integer>15</integer>
@@ -1398,14 +1374,6 @@
 		<key>punto1</key>
 		<integer>81</integer>
 		<key>punto2</key>
-		<integer>83</integer>
-		<key>accesible</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>punto1</key>
-		<integer>81</integer>
-		<key>punto2</key>
 		<integer>79</integer>
 		<key>accesible</key>
 		<true/>
@@ -1543,6 +1511,190 @@
 		<integer>101</integer>
 		<key>punto2</key>
 		<integer>137</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>98</integer>
+		<key>punto2</key>
+		<integer>137</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>15</integer>
+		<key>punto2</key>
+		<integer>138</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>138</integer>
+		<key>punto2</key>
+		<integer>139</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>139</integer>
+		<key>punto2</key>
+		<integer>140</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>140</integer>
+		<key>punto2</key>
+		<integer>141</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>13</integer>
+		<key>punto2</key>
+		<integer>141</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>6</integer>
+		<key>punto2</key>
+		<integer>142</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>125</integer>
+		<key>punto2</key>
+		<integer>143</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>51</integer>
+		<key>punto2</key>
+		<integer>143</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>121</integer>
+		<key>punto2</key>
+		<integer>144</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>121</integer>
+		<key>punto2</key>
+		<integer>72</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>81</integer>
+		<key>punto2</key>
+		<integer>146</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>145</integer>
+		<key>punto2</key>
+		<integer>146</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>83</integer>
+		<key>punto2</key>
+		<integer>145</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>12</integer>
+		<key>punto2</key>
+		<integer>147</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>25</integer>
+		<key>punto2</key>
+		<integer>147</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>76</integer>
+		<key>punto2</key>
+		<integer>148</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>149</integer>
+		<key>punto2</key>
+		<integer>148</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>149</integer>
+		<key>punto2</key>
+		<integer>150</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>151</integer>
+		<key>punto2</key>
+		<integer>150</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>151</integer>
+		<key>punto2</key>
+		<integer>152</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>82</integer>
+		<key>punto2</key>
+		<integer>152</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>92</integer>
+		<key>punto2</key>
+		<integer>153</integer>
 		<key>accesible</key>
 		<true/>
 	</dict>

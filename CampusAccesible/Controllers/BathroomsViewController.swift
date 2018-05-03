@@ -10,6 +10,13 @@ import UIKit
 
 class BathroomsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     @IBOutlet weak var imgBuilding: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     

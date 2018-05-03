@@ -10,15 +10,23 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
+    @IBOutlet weak var infoBt: UIBarButtonItem!
     var buildingArray : NSArray!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Explora"
-        
         let path = Bundle.main.path(forResource: "ListaEdificios", ofType: "plist")!
         buildingArray = NSArray(contentsOfFile: path)
-
+        buildingArray = buildingArray.sorted(by: {($1 as! NSDictionary)["nombre"] as! String > ($0 as! NSDictionary)["nombre"] as! String}) as NSArray
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -99,15 +107,17 @@ class TableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let exploreView = segue.destination as! ExploreViewController
-        let indexP = tableView.indexPathForSelectedRow!
-        let dic = buildingArray[indexP.row] as! NSDictionary
-        
-        exploreView.buildingImage = dic.object(forKey: "imagen") as! String
-        exploreView.schedule = dic.object(forKey: "horario") as! String
-        exploreView.elevator = dic.object(forKey: "elevador") as! Bool
-        exploreView.bathrooms = dic.object(forKey: "banos") as! NSArray
-        exploreView.buildingName = dic.object(forKey: "nombre") as! String
+        if !(sender is UIBarButtonItem) {
+            let exploreView = segue.destination as! ExploreViewController
+            let indexP = tableView.indexPathForSelectedRow!
+            let dic = buildingArray[indexP.row] as! NSDictionary
+            
+            exploreView.buildingImage = dic.object(forKey: "imagen") as! String
+            exploreView.schedule = dic.object(forKey: "horario") as! String
+            exploreView.elevator = dic.object(forKey: "elevador") as! Bool
+            exploreView.bathrooms = dic.object(forKey: "banos") as! NSArray
+            exploreView.buildingName = dic.object(forKey: "nombre") as! String
+        }
     }
 
 }

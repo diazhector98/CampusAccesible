@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CampusAccesible/Controllers/MapViewController.swift"
-            timestampString = "546239670.9439141"
+            timestampString = "547007587.781379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "MapViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CampusAccesible/Controllers/MapViewController.swift"
-            timestampString = "546239670.944167"
+            timestampString = "547007587.7814341"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
-            landmarkName = "quitaTeclado()"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "updateRoute(textField:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SearchTextField/SearchTextField/Classes/SearchTextField.swift"
-            timestampString = "546229902.963439"
+            timestampString = "547007587.781477"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "403"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SearchTextField/SearchTextField/Classes/SearchTextField.swift"
-            timestampString = "546229902.963488"
+            timestampString = "547007587.781508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "472"
-            endingLineNumber = "472"
+            startingLineNumber = "473"
+            endingLineNumber = "473"
             landmarkName = "clearResults()"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CampusAccesible/Controllers/MapViewController.swift"
-            timestampString = "546239670.944368"
+            timestampString = "547007587.7815371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "updateRoute(textField:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CampusAccesible/Classes/PathCalculator.swift"
-            timestampString = "546238427.468679"
+            timestampString = "547007587.7815731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "204"
             endingLineNumber = "204"
-            landmarkName = "mapView(_:didTap:)"
+            landmarkName = "showBuildingCoords(indexes:isOrigin:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
