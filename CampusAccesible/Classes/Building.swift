@@ -15,14 +15,16 @@ class Building: NSObject {
     var schedule : String
     var bathrooms : [NSDictionary]
     var coord_index : [Int]
+    var show : Bool
     
-    init(name: String, image: UIImage, elevator: Bool, schedule: String, bathrooms: [NSDictionary], coord_index: [Int]) {
+    init(name: String, image: UIImage, elevator: Bool, schedule: String, bathrooms: [NSDictionary], coord_index: [Int], show: Bool) {
         self.name = name
         self.image = image
         self.elevator = elevator
         self.schedule = schedule
         self.bathrooms = bathrooms
         self.coord_index = coord_index
+        self.show = show
     }
     
     static func loadBuildingMap() -> [String: Building] {
@@ -31,7 +33,7 @@ class Building: NSObject {
         let buildingsNSArray = NSArray(contentsOfFile: buildingsPath!)
         for building in buildingsNSArray! {
             let castBuilding = building as! NSDictionary
-            buildings[castBuilding.value(forKey: "nombre") as! String] = (Building(name: castBuilding.value(forKey: "nombre") as! String, image: UIImage(named: castBuilding.value(forKey: "imagen") as! String)!, elevator: castBuilding.value(forKey: "elevador") as! Bool, schedule: castBuilding.value(forKey: "horario") as! String, bathrooms: castBuilding.value(forKey: "banos") as! [NSDictionary], coord_index: castBuilding.value(forKey: "coord") as! [Int]))
+            buildings[castBuilding.value(forKey: "nombre") as! String] = (Building(name: castBuilding.value(forKey: "nombre") as! String, image: UIImage(named: castBuilding.value(forKey: "imagen") as! String)!, elevator: castBuilding.value(forKey: "elevador") as! Bool, schedule: castBuilding.value(forKey: "horario") as! String, bathrooms: castBuilding.value(forKey: "banos") as! [NSDictionary], coord_index: castBuilding.value(forKey: "coord") as! [Int], show: castBuilding.value(forKey: "show") as! Bool))
         }
         return buildings
     }

@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Aulas 1</string>
 		<key>imagen</key>
@@ -45,6 +47,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Aulas 2</string>
 		<key>imagen</key>
@@ -87,6 +91,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Aulas 3</string>
 		<key>imagen</key>
@@ -129,6 +135,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Aulas 4</string>
 		<key>imagen</key>
@@ -173,6 +181,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Aulas 6</string>
 		<key>imagen</key>
@@ -216,6 +226,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Aulas 7</string>
 		<key>imagen</key>
@@ -257,6 +269,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Biblioteca</string>
 		<key>imagen</key>
@@ -286,6 +300,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>CIAP</string>
 		<key>imagen</key>
@@ -342,6 +358,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Centrales</string>
 		<key>imagen</key>
@@ -366,6 +384,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Centro de Biotecnología</string>
 		<key>imagen</key>
@@ -396,6 +416,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Centro Estudiantil</string>
 		<key>imagen</key>
@@ -426,6 +448,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>CETEC</string>
 		<key>imagen</key>
@@ -455,6 +479,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>DAF</string>
 		<key>imagen</key>
@@ -484,6 +510,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Gimnasio</string>
 		<key>imagen</key>
@@ -507,6 +535,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Rectoría</string>
 		<key>imagen</key>
@@ -537,6 +567,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Expreso Tec</string>
 		<key>imagen</key>
@@ -553,6 +585,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>TECstore</string>
 		<key>imagen</key>
@@ -570,6 +604,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Starbucks</string>
 		<key>imagen</key>
@@ -587,6 +623,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Super Salads</string>
 		<key>imagen</key>
@@ -603,6 +641,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Panem</string>
 		<key>imagen</key>
@@ -619,6 +659,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Subway</string>
 		<key>imagen</key>
@@ -635,6 +677,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Doña Tota</string>
 		<key>imagen</key>
@@ -651,6 +695,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Oriental Wok</string>
 		<key>imagen</key>
@@ -667,6 +713,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Señor Latino</string>
 		<key>imagen</key>
@@ -683,6 +731,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Nectarworks</string>
 		<key>imagen</key>
@@ -699,6 +749,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Oxxo</string>
 		<key>imagen</key>
@@ -715,6 +767,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Jubileo</string>
 		<key>imagen</key>
@@ -731,6 +785,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>The Food Box</string>
 		<key>imagen</key>
@@ -747,6 +803,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Bancomer</string>
 		<key>imagen</key>
@@ -763,6 +821,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<true/>
 		<key>nombre</key>
 		<string>Circuito Tec</string>
 		<key>imagen</key>
@@ -779,6 +839,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>show</key>
+		<false/>
 		<key>nombre</key>
 		<string>Entrada</string>
 		<key>imagen</key>
