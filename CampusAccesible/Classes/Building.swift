@@ -33,7 +33,7 @@ class Building: NSObject {
         let buildingsNSArray = NSArray(contentsOfFile: buildingsPath!)
         for building in buildingsNSArray! {
             let castBuilding = building as! NSDictionary
-            buildings[castBuilding.value(forKey: "nombre") as! String] = (Building(name: castBuilding.value(forKey: "nombre") as! String, image: UIImage(named: castBuilding.value(forKey: "imagen") as! String)!, elevator: castBuilding.value(forKey: "elevador") as! Bool, schedule: castBuilding.value(forKey: "horario") as! String, bathrooms: castBuilding.value(forKey: "banos") as! [NSDictionary], coord_index: castBuilding.value(forKey: "coord") as! [Int], show: castBuilding.value(forKey: "show") as! Bool))
+            buildings[castBuilding.value(forKey: "nombre") as! String] = (Building(name: castBuilding.value(forKey: "nombre") as! String, image: UIImage(named: castBuilding.value(forKey: "imagen") as! String)!, elevator: (castBuilding.allKeys as! [String]).contains("elevador") ? (castBuilding.value(forKey: "elevador") as! Bool) : false, schedule: castBuilding.value(forKey: "horario") as! String, bathrooms: castBuilding.value(forKey: "banos") as! [NSDictionary], coord_index: castBuilding.value(forKey: "coord") as! [Int], show: castBuilding.value(forKey: "show") as! Bool))
         }
         return buildings
     }

@@ -73,7 +73,13 @@ class TableViewController: UITableViewController {
             
             exploreView.buildingImage = dic.object(forKey: "imagen") as! String
             exploreView.schedule = dic.object(forKey: "horario") as! String
-            exploreView.elevator = dic.object(forKey: "elevador") as! Bool
+            if (dic.allKeys as! [String]).contains("elevador") {
+                exploreView.showElevator = true
+                exploreView.elevator = dic.object(forKey: "elevador") as! Bool
+            }
+            else {
+                exploreView.showElevator = false
+            }
             exploreView.bathrooms = dic.object(forKey: "banos") as! NSArray
             exploreView.buildingName = dic.object(forKey: "nombre") as! String
         }

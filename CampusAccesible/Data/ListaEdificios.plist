@@ -568,13 +568,11 @@
 	</dict>
 	<dict>
 		<key>show</key>
-		<true/>
+		<false/>
 		<key>nombre</key>
 		<string>Expreso Tec</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -591,8 +589,6 @@
 		<string>TECstore</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -610,8 +606,6 @@
 		<string>Starbucks</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -629,8 +623,6 @@
 		<string>Super Salads</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -647,8 +639,6 @@
 		<string>Panem</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -665,8 +655,6 @@
 		<string>Subway</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -683,8 +671,6 @@
 		<string>Doña Tota</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -698,11 +684,9 @@
 		<key>show</key>
 		<true/>
 		<key>nombre</key>
-		<string>Oriental Wok</string>
+		<string>Fusion Wok</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -719,8 +703,6 @@
 		<string>Señor Latino</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -737,8 +719,6 @@
 		<string>Nectarworks</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -755,8 +735,6 @@
 		<string>Oxxo</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -773,8 +751,6 @@
 		<string>Jubileo</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -791,8 +767,6 @@
 		<string>The Food Box</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -809,8 +783,6 @@
 		<string>Bancomer</string>
 		<key>imagen</key>
 		<string>rectoria</string>
-		<key>elevador</key>
-		<false/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -822,7 +794,7 @@
 	</dict>
 	<dict>
 		<key>show</key>
-		<true/>
+		<false/>
 		<key>nombre</key>
 		<string>Circuito Tec</string>
 		<key>imagen</key>

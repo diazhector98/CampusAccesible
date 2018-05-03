@@ -23,6 +23,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var buildingImage : String!
     var schedule : String!
+    var showElevator : Bool!
     var elevator : Bool!
     var bathrooms : NSArray!
     var buildingName : String!
@@ -43,7 +44,10 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        if showElevator {
+            return 3
+        }
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,7 +57,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.imgView?.image = #imageLiteral(resourceName: "clock")
             cell.lbTitle?.text = schedule
             cell.isUserInteractionEnabled = false
-        } else if indexPath.row == 1 {
+        } else if indexPath.row == 1 && showElevator {
             cell.isUserInteractionEnabled = false
             if elevator {
                 cell.imgView?.image = #imageLiteral(resourceName: "checkmark")
@@ -61,10 +65,10 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
                 cell.imgView?.image = #imageLiteral(resourceName: "cross")
             }
             cell.lbTitle?.text = "Elevador"
-        } else if indexPath.row == 2 {
-            cell.accessoryType = .disclosureIndicator
+        } else {
             if bathrooms.count > 0 {
                 cell.imgView?.image = #imageLiteral(resourceName: "checkmark")
+                cell.accessoryType = .disclosureIndicator
             } else {
                 cell.imgView?.image = #imageLiteral(resourceName: "cross")
             }
