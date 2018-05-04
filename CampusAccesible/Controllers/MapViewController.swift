@@ -46,8 +46,7 @@ CLLocationManagerDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: 25.6515, longitude: -100.289599, zoom: 16.6)
         mapView.camera = camera
         self.mapView?.isMyLocationEnabled = true
-        self.locationManager.delegate = self
-        self.locationManager.startUpdatingLocation()
+        startReceivingLocationChanges()
         
         // Restricciones del movimiento del mapa
         mapView.setMinZoom(16.0, maxZoom: 21.0)
@@ -212,6 +211,24 @@ CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.locationManager.stopUpdatingLocation()
+    }
+    
+    func startReceivingLocationChanges() {
+        let authorizationStatus = CLLocationManager.authorizationStatus()
+        if authorizationStatus != .authorizedWhenInUse && authorizationStatus != .authorizedAlways {
+            // User has not authorized access to location information.
+            return
+        }
+        // Do not start services that aren't available.
+        if !CLLocationManager.locationServicesEnabled() {
+            // Location services is not available.
+            return
+        }
+        // Configure and start the service.
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        locationManager.distanceFilter = 5.0  // In meters.
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
     }
 
 }

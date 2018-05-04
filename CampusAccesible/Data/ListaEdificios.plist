@@ -12,7 +12,7 @@
 		<key>elevador</key>
 		<false/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -56,7 +56,7 @@
 		<key>elevador</key>
 		<false/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -100,7 +100,7 @@
 		<key>elevador</key>
 		<false/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -144,7 +144,7 @@
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -190,7 +190,7 @@
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -235,7 +235,7 @@
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -278,7 +278,7 @@
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>Abierto 24 horas</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -309,7 +309,7 @@
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -367,7 +367,7 @@
 		<key>elevador</key>
 		<false/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>Abierto 24 horas</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -393,7 +393,7 @@
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -425,7 +425,7 @@
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -457,7 +457,7 @@
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -488,7 +488,7 @@
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -519,7 +519,7 @@
 		<key>elevador</key>
 		<false/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -544,7 +544,7 @@
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array>
 			<dict>
@@ -574,7 +574,7 @@
 		<key>imagen</key>
 		<string>rectoria</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -590,7 +590,7 @@
 		<key>imagen</key>
 		<string>tecstore</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>8am - 7pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -607,7 +607,7 @@
 		<key>imagen</key>
 		<string>starbucks</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 10pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -624,7 +624,7 @@
 		<key>imagen</key>
 		<string>supersalads</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>8am - 9pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -640,7 +640,7 @@
 		<key>imagen</key>
 		<string>panem</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>6:30am - 9:30pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -656,7 +656,7 @@
 		<key>imagen</key>
 		<string>subway</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>8am - 10pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -672,7 +672,7 @@
 		<key>imagen</key>
 		<string>donatota</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>8am - 9pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -688,7 +688,7 @@
 		<key>imagen</key>
 		<string>wok</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>9am - 6pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -704,7 +704,7 @@
 		<key>imagen</key>
 		<string>senorlatino</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>6:30am - 9pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -720,7 +720,7 @@
 		<key>imagen</key>
 		<string>nectarworks</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7:30am - 9pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -736,7 +736,7 @@
 		<key>imagen</key>
 		<string>oxxo</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -752,7 +752,7 @@
 		<key>imagen</key>
 		<string>jubileo</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 4:30pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -768,7 +768,7 @@
 		<key>imagen</key>
 		<string>foodbox</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -784,7 +784,7 @@
 		<key>imagen</key>
 		<string>bancomer</string>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>8:30am - 4pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -802,7 +802,7 @@
 		<key>elevador</key>
 		<false/>
 		<key>horario</key>
-		<string>7am - 7pm</string>
+		<string>6am - 7pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
