@@ -142,7 +142,7 @@
 		<key>imagen</key>
 		<string>aulas4</string>
 		<key>elevador</key>
-		<false/>
+		<true/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -233,7 +233,7 @@
 		<key>imagen</key>
 		<string>aulas7</string>
 		<key>elevador</key>
-		<false/>
+		<true/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
@@ -423,7 +423,7 @@
 		<key>imagen</key>
 		<string>centroEstudiantil</string>
 		<key>elevador</key>
-		<false/>
+		<true/>
 		<key>horario</key>
 		<string>7am - 7pm</string>
 		<key>banos</key>
