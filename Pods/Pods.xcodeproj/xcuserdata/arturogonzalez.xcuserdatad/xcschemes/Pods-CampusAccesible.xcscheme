@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "210520CECB1488905B6C9CA9CC026864"
+               BlueprintIdentifier = "840CDDB435B73E73BFCEDAFE97732420"
                BuildableName = "Pods_CampusAccesible.framework"
                BlueprintName = "Pods-CampusAccesible"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "210520CECB1488905B6C9CA9CC026864"
+            BlueprintIdentifier = "840CDDB435B73E73BFCEDAFE97732420"
             BuildableName = "Pods_CampusAccesible.framework"
             BlueprintName = "Pods-CampusAccesible"
             ReferencedContainer = "container:Pods.xcodeproj">
