@@ -60,33 +60,6 @@ CLLocationManagerDelegate {
         paths = Path.loadPathArray(locations: locations)
         buildings = Building.loadBuildingMap()
         
-        if false {
-            // TESTING Muestra todos los marcadores
-            for (index, location) in locations.enumerated() {
-                let marker = GMSMarker()
-                marker.position = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lon)
-                marker.title = String(location.lat) + " " + String(location.lon)
-                marker.snippet = String(index)
-                marker.map = mapView
-            }
-            
-            // TESTING Muestra todos los caminos
-            for path in paths {
-                let pointPath = GMSMutablePath()
-                pointPath.add(CLLocationCoordinate2D(latitude: path.coord1.lat, longitude: path.coord1.lon))
-                pointPath.add(CLLocationCoordinate2D(latitude: path.coord2.lat, longitude: path.coord2.lon))
-                let line = GMSPolyline(path: pointPath)
-                line.map = mapView
-                if path.isAccessible {
-                    line.strokeColor = UIColor.blue
-                }
-                else {
-                    line.strokeColor = UIColor.black
-                }
-                line.strokeWidth = 5
-            }
-        }
-        
         generator = PathCalculator(markers: locations, paths: paths, map: mapView, view: view)
         mapView.delegate = generator
         // Estilo y datos que se filtran

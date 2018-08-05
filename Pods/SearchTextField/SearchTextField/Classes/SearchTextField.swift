@@ -401,7 +401,6 @@ open class SearchTextField: UITextField {
     
     open func hideResultsList() {
         if let tableFrame:CGRect = tableView?.frame {
-            clearResults()
             let newFrame = CGRect(x: tableFrame.origin.x, y: tableFrame.origin.y, width: tableFrame.size.width, height: 0.0)
             UIView.animate(withDuration: 0.2, animations: { [weak self] in
                 self?.tableView?.frame = newFrame
@@ -413,7 +412,7 @@ open class SearchTextField: UITextField {
     fileprivate func filter(forceShowAll addAll: Bool) {
         clearResults()
         
-        if text!.count < minCharactersNumberToStartFiltering {
+        if text!.characters.count < minCharactersNumberToStartFiltering {
             return
         }
         
@@ -451,7 +450,7 @@ open class SearchTextField: UITextField {
                 }
                 
                 if item.title.lowercased().hasPrefix(textToFilter) {
-                    let indexFrom = textToFilter.index(textToFilter.startIndex, offsetBy: textToFilter.count)
+                    let indexFrom = textToFilter.index(textToFilter.startIndex, offsetBy: textToFilter.characters.count)
                     let itemSuffix = item.title[indexFrom...]
                     
                     item.attributedTitle = NSMutableAttributedString(string: String(itemSuffix))

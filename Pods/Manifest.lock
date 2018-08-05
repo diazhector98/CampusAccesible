@@ -20,7 +20,7 @@ DEPENDENCIES:
   - SearchTextField
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - GoogleMaps
     - GooglePlaces
     - MarqueeLabel
@@ -38,4 +38,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 72b4cd68724b9ad75f4772102c8dbd055c62ee62
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
