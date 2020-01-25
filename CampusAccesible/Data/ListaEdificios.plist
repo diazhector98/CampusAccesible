@@ -586,23 +586,6 @@
 		<key>show</key>
 		<true/>
 		<key>nombre</key>
-		<string>TECstore</string>
-		<key>imagen</key>
-		<string>tecstore</string>
-		<key>horario</key>
-		<string>8am - 7pm</string>
-		<key>banos</key>
-		<array/>
-		<key>coord</key>
-		<array>
-			<integer>18</integer>
-			<integer>85</integer>
-		</array>
-	</dict>
-	<dict>
-		<key>show</key>
-		<true/>
-		<key>nombre</key>
 		<string>Starbucks</string>
 		<key>imagen</key>
 		<string>starbucks</string>
@@ -673,22 +656,6 @@
 		<string>donatota</string>
 		<key>horario</key>
 		<string>8am - 9pm</string>
-		<key>banos</key>
-		<array/>
-		<key>coord</key>
-		<array>
-			<integer>143</integer>
-		</array>
-	</dict>
-	<dict>
-		<key>show</key>
-		<true/>
-		<key>nombre</key>
-		<string>Fusion Wok</string>
-		<key>imagen</key>
-		<string>wok</string>
-		<key>horario</key>
-		<string>9am - 6pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
